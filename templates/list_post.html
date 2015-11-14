@@ -6,19 +6,18 @@
     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
     
     <a href="/post/{{_id}}" class="list_post">
-      {{#if isOwner}}
-        <button class="Edit">
-          Edit
-        </button>
-      {{/if}}
       <span class="text"><strong>{{name}}</strong> - {{text}}</span>
       <span class="category">Category: {{category}}</span>
     </a>
 
-    <div id="Voting">
+    <div class="voting">
       <button class="Upvote"></button>
       {{votes}}
       <button class="Downvote"></button>
+    </div>
+
+    <div class="edit-menu">
+      <a href="post/edit/{{_id}}" class="edit">Edit</a>
     </div>
   
 </template>

@@ -36,3 +36,11 @@ Router.route('/post/:_id', {
 	    return Posts.findOne(this.params._id);
 	}
 });
+
+Router.route('/post/edit/:_id',{
+  name: 'edit-post',
+  template: 'post_form',
+  data: function(){
+    return Posts.findOne(this.params._id);
+  }
+});

@@ -1,16 +1,17 @@
 <template name="post_form">
 {{#if isLogged}}
 	<div id="error"></div>
-	<form class="new-post">
-	  <input type="text" name="text" id="post-text" placeholder="Type to add new posts" />
+
+	  <input type="text" name="text" id="post-text" placeholder="Type to add new posts" value="{{text}}"/>
+
 	  <select id="category" required>
 	  	<option selected disabled>Category</option>
 	  	{{#each tabs}}
-        	<option value="{{name}}">{{name}}</option>
+        	<option value="{{name}}" selected="">{{name}}</option>
       	{{/each}}
 	  </select>
 	  <input type="checkbox" id="anonymous"><label for="anonymous">Post Anonymously</label>
 	  <div class="submit-post">Submit post</div>
-	</form>
+
 {{/if}}
 </template>
