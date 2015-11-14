@@ -13,8 +13,9 @@ Meteor.methods({
     Posts.insert({
       text: text,
       createdAt: new Date(),
-      owner: Meteor.userId(),
-      username: Meteor.user().username
+      userId: Meteor.userId(),
+      username: Meteor.user().username,
+      votes: 0
     });
   },
   deletePost: function (postId) {

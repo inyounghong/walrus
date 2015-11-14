@@ -12,11 +12,10 @@ Template.index.helpers({
       return Posts.find({}, {sort: {createdAt: -1}});
     }
   },
-  hideCompleted: function () {
-    return Session.get("hideCompleted");
-  },
-  incompleteCount: function () {
-    return Posts.find({checked: {$ne: true}}).count();
+  
+
+  votes: function () {
+    return Posts.find();
   }
 });
 
