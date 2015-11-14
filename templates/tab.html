@@ -1,6 +1,10 @@
 <!-- different tabs -->
 
 <template name= "tab">
+	<select id = "filter" > 
+		<option value = "Top" selected = {{topIsSelected}}> Top</option>
+		<option value = "Oldest" selected = {{oldestIsSelected}}> Oldest</option>
+	</select>
 	{{#each posts}}
 		{{> list_post}}
 	{{/each}}
