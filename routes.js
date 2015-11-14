@@ -23,7 +23,7 @@ Router.route('/:subject', function(){
 		return Meteor.subscribe('categories');
 	};
 	var posts = Posts.find({category: this.params.subject});
-	this.render('tab', {data: {posts: posts}});
+	this.render('tab'); //{data: {posts: posts}});
 
 });
 
