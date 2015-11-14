@@ -2,7 +2,7 @@ Meteor.subscribe("comments");
 
 Template.post.helpers({
   comments: function () {
-    return Comments.find({}, {sort: {createdAt: -1}});
+    return Comments.find({}, {sort: {votes: -1}});
   },
 
 });
@@ -20,6 +20,13 @@ Template.post.events({
     console.log(this._id);
     Meteor.call("deleteComment", this._id);
   },
+
+  "click .upvote-comment" : function (event) {
+    Meteor.call("upvoteComment", this._id);
+  },
+  "click .downvote-comment" : function(event) {
+    Meteor.call("downvoteComment", this._id);
+  }
 
   
 });

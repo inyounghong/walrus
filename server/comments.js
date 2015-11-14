@@ -29,11 +29,11 @@ Meteor.methods({
     });
   },
 
-  // upvoteComment: function(postId) {
-  //   Comments.update(postId, {$inc: {votes: 1}});
-  // },
+  upvoteComment: function(postId) {
+    Comments.update(postId, {$inc: {votes: 1}});
+  },
 
-  // downvoteComment: function(postId) {
-  //   Comments.update(postId, {$inc: {votes: -1}});
-  // }
+  downvoteComment: function(postId) {
+    Comments.update(postId, {$inc: {votes: -1}});
+  }
 });
