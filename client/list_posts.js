@@ -46,6 +46,11 @@ Template.index.events({
 Template.list_post.helpers({
   isOwner: function () {
     return this.owner === Meteor.userId();
+  },
+
+  // Returns name of poster
+  name: function (){
+    return this.userId;
   }
 });
 
