@@ -7,15 +7,17 @@
       <button id="loginWithGoogle">Login with Google</button>
       <button id="logout">Logout</button>
 
+
+
 <!--       {{#if cornellUser()}}
         Cornell user!
       {{/if}} -->
 
-      <!-- {{#if currentUser}} -->
+      {{#if isLogged}}
         <form class="new-post">
           <input type="text" name="text" placeholder="Type to add new posts" />
         </form>
-      <!-- {{/if}} -->
+      {{/if}}
     </header>
  
       {{#each posts}}

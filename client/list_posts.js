@@ -13,10 +13,12 @@ Template.index.helpers({
     }
   },
 
-  
-
   votes: function () {
     return Posts.find();
+  },
+
+  isLogged: function(){
+    return !(Meteor.userId() === null);
   }
 });
 
