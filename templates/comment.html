@@ -1,0 +1,13 @@
+<template name="comment">
+	<div class="comment">
+		<button class="upvote-comment">^</button>
+    	{{votes}}
+    	<button class="downvote-comment"></button>
+		<span class="comment-user">{{userId}}</span>
+		{{#unless deleted}}
+			<span class="delete">Delete</span>
+		{{/unless}}
+		<div class="comment-text">{{text}}</div>
+	</div>
+
+</template>

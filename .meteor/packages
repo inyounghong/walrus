@@ -9,3 +9,6 @@ accounts-ui
 accounts-password
 iron:router
 mizzao:bootstrap-3
+accounts-google
+jquery
+service-configuration
