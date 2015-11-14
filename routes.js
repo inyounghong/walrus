@@ -11,6 +11,18 @@ Router.route('/', {
 // POST ROUTES
 
 // Individual
+Router.route('/:subject', {
+	name: 'academic',
+	template: 'tab',
+	waitOn: function() {
+		return Meteor.subscribe('categories');
+	},
+	data: function() {
+		 posts: Posts.find({category: this.params.subject});
+	}, 
+
+});
+
 Router.route('/post/:_id', {
   template: 'post',
   waitOn: function() {

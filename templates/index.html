@@ -11,10 +11,14 @@
         </form>
       <!-- {{/if}} -->
     </header>
- 
-      {{#each posts}}
-        {{> list_post}}
+      {{#each tabs}}
+        <a href="/{{name}}">{{name}}</a>
       {{/each}}
+      <ul id="Posts">
+      {{#each posts}}
+        <li> {{> list_post}}</li>
+      {{/each}}
+    </ul>
   </div>
 
 
