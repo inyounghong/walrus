@@ -6,18 +6,8 @@
 
       <button id="loginWithGoogle">Login with Google</button>
       <button id="logout">Logout</button>
-
-
-
-<!--       {{#if cornellUser()}}
-        Cornell user!
-      {{/if}} -->
-
-      {{#if isLogged}}
-        <form class="new-post">
-          <input type="text" name="text" placeholder="Type to add new posts" />
-        </form>
-      {{/if}}
+      
+      <a href="/post_form">Add Post!</a>
     </header>
       {{#each tabs}}
         <a href="/{{name}}">{{name}}</a>

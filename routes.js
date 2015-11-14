@@ -10,6 +10,11 @@ Router.route('/', {
 
 // POST ROUTES
 
+// Add post page
+Router.route('/post_form', {
+    template: 'post_form'
+});
+
 // Individual
 Router.route('/:subject', {
 	name: 'academic',

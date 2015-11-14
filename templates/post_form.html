@@ -1,0 +1,13 @@
+<template name="post_form">
+{{#if isLogged}}
+	<form class="new-post">
+	  <input type="text" name="text" placeholder="Type to add new posts" />
+	  <select required>
+	  	<option selected disabled>Category</option>
+	  	{{#each tabs}}
+        	<option value="{{name}}">{{name}}</option>
+      	{{/each}}
+	  </select>
+	</form>
+{{/if}}
+</template>

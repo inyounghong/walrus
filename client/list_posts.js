@@ -19,9 +19,7 @@ Template.index.helpers({
     return Posts.find();
   },
 
-  isLogged: function(){
-    return !(Meteor.userId() === null);
-  },
+  
   
   tabs: function() {
     return Categories.find();
@@ -30,19 +28,7 @@ Template.index.helpers({
 });
 
 Template.index.events({
-  "submit .new-post": function (event) {
-    // Prevent default browser form submit
-    event.preventDefault();
-
-    // Get value from form element
-    var text = event.target.text.value;
-
-    // Insert a post into the collection
-    Meteor.call("addPost", text);
-
-    // Clear form
-    event.target.text.value = "";
-  },
+  
   "change .hide-completed input": function (event) {
     Session.set("hideCompleted", event.target.checked);
   },
