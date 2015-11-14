@@ -7,11 +7,17 @@ Template.post_form.helpers({
 
 	tabs: function() {
 	    return Categories.find();
-	  }
+	  },
+
+	id: function(){
+		console.log("ID" + this._id);
+		return this._id;
+	}
 });
 
 Template.post_form.events({
 	"click .submit-post": function (event) {
+		console.log(this._id);
 		var text = document.getElementById("post-text").value;
 	    var isAnon = document.getElementById("anonymous").checked;
 	    var category = document.getElementById("category").value;
