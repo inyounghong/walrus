@@ -13,9 +13,10 @@ Template.post_form.helpers({
 Template.post_form.events({
 	"click .submit-post": function (event) {
 		var text = document.getElementById("post-text").value;
-	    var isAnon = document.getElementById("anonymous").value;
+	    var isAnon = document.getElementById("anonymous").checked;
 	    var category = document.getElementById("category").value;
 
+	    console.log(isAnon);
 	    // Require text and category
 		if (isEmpty(text) || category == "Category"){
 			console.log("error");

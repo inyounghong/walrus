@@ -11,7 +11,7 @@ Template.post.events({
   "click #add-comment": function (event) {
     event.preventDefault();
     var text = document.getElementById("comment-text").value;
-    var isAnonymous = document.getElementById("anonymous").value;
+    var isAnonymous = document.getElementById("anonymous").checked;
     Meteor.call("addComment", text);
     document.getElementById("comment-text").value = "";
   },
