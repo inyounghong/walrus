@@ -5,22 +5,25 @@ Meteor.publish("posts", function () {
 
 Meteor.methods({
 
-  addPost: function (text, cat) {
+  addPost: function (text, cat, anon) {
     // Make sure the user is logged in before inserting a task
     // if (! Meteor.userId()) {
     //   throw new Meteor.Error("not-authorized");
     // }
   
     // Insert a post record
-    Posts.insert({
+    var data = {
       category: "academic",
       text: text,
       createdAt: new Date(),
       userId: Meteor.userId(),
       username: Meteor.user().username,
       votes: 0,
-      category: cat
-    });
+      category: cat,
+      status: "open",
+      anonymous: anon
+    };
+    return Posts.insert(data);
   },
   deletePost: function (postId) {
     Posts.remove(postId);
