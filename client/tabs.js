@@ -8,11 +8,12 @@ Template.tab.helpers( {
 			filter = "Top";
 		}
 		if (filter == "Top"){
-			return Posts.find({}, {sort: {votes: -1}});
+			console.log(this.subject);
+			return Posts.find({category: this.subject}, {sort: {votes: -1}});
 		}
 
 		else if (filter == "Oldest") {
-			return Posts.find({}, {sort: {createdAt: 1}});
+			return Posts.find({category: this.subject}, {sort: {createdAt: 1}});
 		}
 	},
 
