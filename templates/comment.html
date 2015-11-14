@@ -1,7 +1,9 @@
 <template name="comment">
 	<div class="comment">
 		<span class="comment-user">{{userId}}</span>
-		<span class="delete">Delete</span>
+		{{#unless deleted}}
+			<span class="delete">Delete</span>
+		{{/unless}}
 		<div class="comment-text">{{text}}</div>
 	</div>
 
