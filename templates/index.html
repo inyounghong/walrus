@@ -1,0 +1,22 @@
+<template name="index">
+  <div class="container">
+    <header>
+      <h1>Post List ({{incompleteCount}})</h1>
+
+      {{> loginButtons}}
+
+      <!-- {{#if currentUser}} -->
+        <form class="new-post">
+          <input type="text" name="text" placeholder="Type to add new posts" />
+        </form>
+      <!-- {{/if}} -->
+    </header>
+ 
+      {{#each posts}}
+        {{> list_post}}
+      {{/each}}
+  </div>
+
+
+</template>
+ 
