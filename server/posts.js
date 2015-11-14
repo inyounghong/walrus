@@ -2,7 +2,9 @@ Meteor.publish("posts", function () {
   return Posts.find();
 });
 
+
 Meteor.methods({
+
   addPost: function (text) {
     // Make sure the user is logged in before inserting a task
     // if (! Meteor.userId()) {
@@ -11,6 +13,7 @@ Meteor.methods({
   
     // Insert a post record
     Posts.insert({
+      category: "academic",
       text: text,
       createdAt: new Date(),
       userId: Meteor.userId(),

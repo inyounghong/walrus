@@ -1,4 +1,5 @@
 Meteor.subscribe("posts");
+Meteor.subscribe("categories");
 
 
 Template.index.helpers({
@@ -13,13 +14,19 @@ Template.index.helpers({
     }
   },
 
+
   votes: function () {
     return Posts.find();
   },
 
   isLogged: function(){
     return !(Meteor.userId() === null);
+  },
+  
+  tabs: function() {
+    return Categories.find();
   }
+
 });
 
 Template.index.events({
