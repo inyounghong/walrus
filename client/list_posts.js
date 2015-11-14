@@ -4,23 +4,13 @@ Meteor.subscribe("categories");
 
 Template.index.helpers({
   posts: function () {
-    // Show newest posts at the top
-    if (Session.get("hideCompleted")) {
-      // If hide completed is checked, filter posts
-      return Posts.find({checked: {$ne: true}}, {sort: {createdAt: -1}});
-    } else {
-      // Otherwise, return all of the posts
-      return Posts.find({}, {sort: {createdAt: -1}});
-    }
+    return Posts.find({}, {sort: {createdAt: -1}});
   },
-
 
   votes: function () {
     return Posts.find();
   },
 
-  
-  
   tabs: function() {
     return Categories.find();
   }
