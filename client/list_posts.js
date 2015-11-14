@@ -35,7 +35,9 @@ Template.index.events({
   },
   "change .hide-completed input": function (event) {
     Session.set("hideCompleted", event.target.checked);
-  }
+  },
+
+  
 });
 
 Template.list_post.helpers({
@@ -52,6 +54,13 @@ Template.list_post.helpers({
   "click .delete": function () {
     console.log(this._id);
     Meteor.call("deletePost", this._id);
+  },
+
+  "click .Upvote" : function (event) {
+    Meteor.call("upvotePost", this._id);
+  },
+  "click .Downvote" : function(event) {
+    Meteor.call("downvotePost", this._id);
   }
 });
 

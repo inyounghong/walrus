@@ -21,6 +21,14 @@ Meteor.methods({
   deletePost: function (postId) {
     Posts.remove(postId);
   },
+
+  upvotePost: function(postId) {
+    Posts.update(postId, {$inc: {votes: 1}});
+  },
+
+  downvotePost: function(postId) {
+    Posts.update(postId, {$inc: {votes: -1}});
+  }
   // setChecked: function (postId, setChecked) {
   //   Posts.update(postId, { $set: { checked: setChecked} });
   // },
