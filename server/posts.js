@@ -12,7 +12,7 @@ Meteor.methods({
     // }
   
     // Insert a post record
-    Posts.insert({
+    var data = {
       category: "academic",
       text: text,
       createdAt: new Date(),
@@ -22,7 +22,8 @@ Meteor.methods({
       category: cat,
       status: "open",
       anonymous: anon
-    });
+    };
+    return Posts.insert(data);
   },
   deletePost: function (postId) {
     Posts.remove(postId);

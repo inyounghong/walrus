@@ -24,9 +24,12 @@ Template.post_form.events({
 		} 
 		else {
 			console.log("adding post");
-			Meteor.call("addPost", text, category, isAnon);
+			Meteor.call("addPost", text, category, isAnon, function(err, data){
+				console.log(data);
+				Router.go("/post/" + data);
+			});
 	    	// Redirect
-	    	Router.go("/");
+
 		}
 	    
 	  },
