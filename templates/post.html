@@ -7,4 +7,16 @@
     	{{votes}}
     	<button class="Downvote"></button>
    	</div>
+
+   	<!-- Form for adding a new comment -->
+   	<form class="new-comment">
+      <input type="text" name="text" id="comment-text" placeholder="Add comment" />
+      <label for="anonymous">Comment Anonymously</label><input type="checkbox" id="anonymous" name="anonymous"/>
+      <button id="add-comment">Comment</button>
+    </form>
+
+   	{{#each comments}}
+   		{{> comment}}
+   	{{/each}}
 </template>
+
