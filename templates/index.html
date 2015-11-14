@@ -3,7 +3,13 @@
     <header>
       <h1>Post List ({{incompleteCount}})</h1>
 
-      {{> loginButtons}}
+
+      <button id="loginWithGoogle">Login with Google</button>
+      <button id="logout">Logout</button>
+
+<!--       {{#if cornellUser()}}
+        Cornell user!
+      {{/if}} -->
 
       <!-- {{#if currentUser}} -->
         <form class="new-post">
