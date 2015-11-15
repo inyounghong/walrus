@@ -1,390 +1,357 @@
 body{
-				margin: 0;
-				font-family: "Raleway", sans-serif;
-				background-color: #FFF;
-			}
-			a.login{
-				color: #fff !important;
-    			text-decoration: none;
-			}
-			#loginpage{
-				background-image: url("../images/backgroundimg.jpg");
-				/*IMG SOURCE: https://en.wikipedia.org/wiki/Cornell_University#/
-				media/File:Cornell_University_arts_quad.JPG */
-				background-attachment: fixed;
-				background-repeat: no-repeat;
-				background-size: 1460px 978px;
-			}
+	margin: 0;
+	font-family: "Raleway", sans-serif;
+	background-color: #FFF;
+}
+ul{
+	padding: 0;
+}
+a.login{
+	color: #fff !important;
+	text-decoration: none;
+}
+#loginpage{
+	background-image: url("../images/backgroundimg.jpg");
+	/*IMG SOURCE: https://en.wikipedia.org/wiki/Cornell_University#/
+	media/File:Cornell_University_arts_quad.JPG */
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 1460px 978px;
+	height: 800px;
+}
 
-			/*START HOMEPAGE STYLING*/
-			#logo{
-				margin-top: 150px;
-				text-align: center;
-				margin-left: auto;
-				margin-right: auto;
-			}
-			#sa{
-				float: right;
-				margin: auto;
-				padding: 10px;
-			}
-			#subtitle{
-				border-width: 1px;
-				border-spacing: 50px;
-				border-style: solid;
-				border-color: white;
-				border-radius: 1px 1px 1px 1px;
-				color:white;
-				font-size: small;
-				font-family: 'Raleway', sans-serif;
-				padding-top: 0px;
-				text-align: center;
-				margin-top: 100px;
+/*START HOMEPAGE STYLING*/
+#logo{
+	margin-top: 150px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+#sa{
+	float: right;
+	margin: auto;
+	padding: 10px;
+}
+#subtitle{
+	border-width: 1px;
+	border-spacing: 50px;
+	border-style: solid;
+	border-color: white;
+	border-radius: 1px 1px 1px 1px;
+	color:white;
+	font-size: small;
+	font-family: 'Raleway', sans-serif;
+	padding-top: 0px;
+	text-align: center;
+	margin-top: 100px;
 
-			}
-			a#subtitlelink{
-				text-decoration: none;
-				color: #ffffff;
-			}
-			#mainsub{
-				padding-top: 30px;
-				margin: auto;
-				text-align: center;
-			}
+}
+a#subtitlelink{
+	text-decoration: none;
+	color: #ffffff;
+}
+#mainsub{
+	padding-top: 30px;
+	margin: auto;
+	text-align: center;
+}
 
-			#subtitle{
-				text-decoration: none;
-				margin: auto;
-				width: 15%;
-			}
-		
-			#subtitle:hover{
-				background-color: #FFF;
-				-webkit-transition: all .3s linear;
-			}
-			#subtitle h2:hover{
-				color: #B31B1B;
-				-webkit-transition: all .3s linear;
-			}
-			p#footer{
-				color: white;
-				text-align: center;
-				margin-left: auto;
-				margin-right: auto;
-				margin-top: 150px;
-				padding-bottom: 20px;
-			}
-			p#footer a{
-				text-decoration: none;
-				color: white;
-			}
-			p#footer a:hover{
-				color: #B31B1B;
-				-webkit-transition: all .3s linear;
-			}
-			/*END HOMEPAGE STYLING*/
+#subtitle{
+	text-decoration: none;
+	margin: auto;
+	width: 15%;
+}
 
-
-
-			/*post info formatting*/
-			ul.postinfo{
-				margin-top: 50px;
-				margin-bottom: 50px;
-				text-align: center;
-				list-style: none;
-				font-size: small;
-				padding: 16px;
-				margin-top: 0px;
-			}
-			ul.postinfo li{
-				display: inline;
-				color: black;
-				padding-left: 112px;
-				padding-right: 0px;
-				float: left;
-			}
-			/*main menu*/
-			ul.menu{
-				margin-top: 50px;
-				margin-bottom: 50px;
-				text-align: center;
-				list-style: none;
-				font-size: large;
-				color: #ffffff;
-				background-color: #B31B1B;
-				padding: 16px;
-				margin-top: 0px;
-			}
-			ul.menu li{
-				display: inline;
-				color: #ffffff;
-				text-shadow: 2px 2px 4px #000;
-			}
-			ul.menu li a{
-				color: #ffffff;
-				text-decoration: none;
-				text-shadow: 20px;
-				padding-top: 0px;
-				padding-bottom: 0px;
-				padding-left: 70px;
-				padding-right: 70px;
-
-			}
-			#voting{
-				margin-left: 30%
-			}
-
-			ul.menu li a:hover{
-				background-color: #fff;
-				padding-top: 18px;
-				padding-bottom: 18px;
-				padding-left: 70px;
-				padding-right: 70px;
-				color: #B31B1B;
-				-webkit-transition: all .3s linear;
-			}
-
-			/*end main menu*/
+#subtitle:hover{
+	background-color: #FFF;
+	-webkit-transition: all .3s linear;
+}
+#subtitle h2:hover{
+	color: #B31B1B;
+	-webkit-transition: all .3s linear;
+}
+p#footer{
+	color: white;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 150px;
+	padding-bottom: 20px;
+}
+p#footer a{
+	text-decoration: none;
+	color: white;
+}
+p#footer a:hover{
+	color: #B31B1B;
+	-webkit-transition: all .3s linear;
+}
+/*END HOMEPAGE STYLING*/
 
 
-			/*about headings*/
-			h1.petitions{
-				text-align: center;
-				margin: auto;
-				font-size: 200%;
-				font-weight: lighter;
-				font-family: 'Raleway';
-			}
-			h1.headertitle{
-				text-align: center;
-				text-transform: capitalize;
-				color: white;
-				padding-top: 9%;
-				font-size: 300%;
-				font-family: 'Raleway';
-				font-weight: lighter;
-			}
-			h2.petitiontitle{
-				font-weight: lighter;
-				margin-left: 10%;
-				padding-top: 20px;
-				padding-bottom: 10px;
-			}
-			#headerimageacademics{
-				background: url('../images/academic.jpg');
-				height: 230px;
-				width: 100%;
-				position: relative;
-				margin-top: -6%;
-			}
-			#headerimageathletics{
-				background: url('../images/athletics.jpg');
-				height: 230px;
-				width: 100%;
-				position: relative;
-				margin-top: -6%;
-			}
-			#headerimagemaintenance{
-				background: url('../images/maintenance.jpg');
-				height: 230px;
-				width: 100%;
-				position: relative;
-				margin-top: -6%;
-			}
-			#headerimageindex{
-				background: url('../images/artsquad.jpg');
-				height: 230px;
-				width: 100%;
-				position: relative;
-				margin-top: -6%;
-			}
-			.profileLink{
-				position: absolute;
-				margin-left: 1170px;
-				padding-top: 70px;
-			}
-			.profileLink a{
-				color: white;
-				text-transform: uppercase;
-				font-size: large;
-				font-weight: normal;
-			}
-			.profileLink a:hover{
-				color: #B31B1B;
-				-webkit-transition: all .3s linear;
-			}
 
-			p.profile{
-				float:right;
-				position: absolute;
-				color: black;
-			}
-			p.posts{
-				margin-left: 10%;
-				margin-right: 10%;
-			}
-			p#signin{
-				text-align: center;
-				margin: auto;
-				color: #000;
-			}
-			.petitiontext{
-				transition: all .2s ease-in-out;
-			}
-			.petitiontext:hover{
-				transform: scale(1.1);
-			}
-			img.academicimage{
-				position: relative;
-				float: left;
-				margin-top: 6%;
-				margin-left: 10%;
-				margin-right: 3%;
-				margin-bottom: 3%;
-			}
+/*post info formatting*/
+ul.postinfo{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+	list-style: none;
+	font-size: small;
+	padding: 16px;
+	margin-top: 0px;
+}
+ul.postinfo li{
+	display: inline;
+	color: black;
+	padding-left: 112px;
+	padding-right: 0px;
+	float: left;
+}
+/*main menu*/
+ul.menu{
+	position: absolute;
+	top: 0;
+	list-style: none;
+	font-size: 15px;
+	color: #ffffff;
+	background-color: #B31B1B;
+	padding: 10px 50px;
+	width: 100%;
+}
+ul.menu li{
+	display: inline;
+	color: #ffffff;
+	/*text-shadow: 2px 2px 4px #000;*/
+}
+ul.menu li a{
+	text-align: center;
+	color: #ffffff;
+	text-decoration: none;
+	text-shadow: 20px;
+	padding: 13px 20px 12px;
 
-			/*post formatting*/
-			span.glyphicon.glyphicon-chevron-up {
-			    position: relative;
-			    top: 2px !important;
-			    right: 2px !important;
-			    display: inline-block;
-			    font-family: 'Glyphicons Halflings';
-			    font-style: normal;
-			    font-weight: normal;
-			    line-height: 1;
-			    -webkit-font-smoothing: antialiased;
-			}
+}
+#voting{
+	margin-left: 30%
+}
 
-			span.glyphicon.glyphicon-chevron-down {
-			    position: relative;
-			    top: 1px;
-			    right: 3px !important;
-			    display: inline-block;
-			    font-family: 'Glyphicons Halflings';
-			    font-style: normal;
-			    font-weight: normal;
-			    line-height: 1;
-			    -webkit-font-smoothing: antialiased;
-			}
+#profile-link{
+	float: right;
+}
 
-			.btn {
-			    display: inline-block;
-			    padding: 6px 12px;
-			    margin-bottom: 0;
-			    font-size: 14px;
-			    font-weight: normal;
-			    line-height: 1.42857143;
-			    text-align: center;
-			    white-space: nowrap;
-			    vertical-align: middle;
-			    -ms-touch-action: manipulation;
-			    touch-action: manipulation;
-			    cursor: pointer;
-			    -webkit-user-select: none;
-			    -moz-user-select: none;
-			    -ms-user-select: none;
-			    user-select: none;
-			    background-image: none;
-			    border: 0px solid transparent !important;
-    			border-radius: 0px !important;
-			}
-			/*end post formatting*/
+#hey-greeting{
+	float: right;
+	padding-right: 20px;
+	display: inline-block;
+}
 
-			/*add post button*/
-			a:hover{
-				text-decoration: none !important;
-			}
+ul.menu li a:hover{
+	background-color: #fff;
+	padding: 13px 20px 12px;
+	color: #B31B1B;
+	-webkit-transition: all .3s linear;
+}
 
-			/*form formatting*/
+/*end main menu*/
 
-			.form-control {
-			    display: block;
-			    width: 100%;
-			    height: 34px;
-			    padding: 6px 12px;
-			    font-size: 14px;
-			    line-height: 1.42857143;
-			    color: #555;
-			    background-color: #fff;
-			    background-image: none;
-			    border: 1px solid #ccc;
-			    border-radius: 0px !important;
-			    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-			    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-			    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-			    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-			    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-			}
-			select#category.form-control{
-				/*border-radius: 0px !important;*/
-			}
-			input[type="radio"], input[type="checkbox"] {
-			    margin: 9px 0 0 !important;
-			    margin-top: 1px \9;
-			    line-height: normal;
-			}
 
-			input#post-text.form-control{
-				height: 100px !important;
-			}
+/*about headings*/
+h1.petitions{
+	text-align: center;
+	margin: auto;
+	font-size: 200%;
+	font-weight: lighter;
+	font-family: 'Raleway';
+}
+h1.headertitle{
+	text-align: center;
+	text-transform: capitalize;
+	color: white;
+	padding-top: 9%;
+	font-size: 300%;
+	font-family: 'Raleway';
+	font-weight: lighter;
+	text-shadow: 1px 1px 3px #000;
+}
+h2.petitiontitle{
+	font-weight: lighter;
+	margin-left: 10%;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.header-image{
+	height: 250px;
+	width: 100%;
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+#headerimageacademics{
+	background: url('../images/academic.jpg');
+}
+#headerimageathletics{
+	background: url('../images/athletics.jpg');
+}
+#headerimagemaintenance{
+	background: url('../images/maintenance.jpg');
+}
+#headerimageall, #headerimageindex{
+	background: url('../images/artsquad.jpg');
+}
+.profileLink{
+	position: absolute;
+	margin-left: 1170px;
+	padding-top: 70px;
+}
+.profileLink a{
+	color: white;
+	text-transform: uppercase;
+	font-size: large;
+	font-weight: normal;
+}
+.profileLink a:hover{
+	color: #B31B1B;
+	-webkit-transition: all .3s linear;
+}
 
-			#loginWithGoogle{
-				margin-top: 20px;
-				border-style: none;
-			  	border-radius: 0px !important;
-			  	font-family: 'Raleway' !important;
-			  	color: #ffffff !important;
-			  	font-size: 14px !important;
-			  	background-color: transparent;
-			  	padding: 10px 20px 10px 20px !important;
-			  	text-decoration: none !important;
-			}
-			#logout{
-				margin-top: 20px;
-				border-style: none;
-			  	border-radius: 0px !important;
-			  	font-family: 'Raleway' !important;
-			  	color: #ffffff !important;
-			  	font-size: 14px !important;
-			  	background-color: transparent;
-			  	padding: 10px 20px 10px 20px !important;
-			  	text-decoration: none !important;
-			}
+p.profile{
+	float:right;
+	position: absolute;
+	color: black;
+}
+p.posts{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+p#signin{
+	text-align: center;
+	margin: auto;
+	color: #000;
+}
+.petitiontext{
+	transition: all .2s ease-in-out;
+}
+.petitiontext:hover{
+	transform: scale(1.1);
+}
+img.academicimage{
+	position: relative;
+	float: left;
+	margin-top: 6%;
+	margin-left: 10%;
+	margin-right: 3%;
+	margin-bottom: 3%;
+}
 
-			#loginWithGoogle:hover {
-			  	background: #B31B1B !important;
-			  	text-decoration: none !important;
-			  	color: #B31B1B;
-			  	-webkit-transition: all .3s linear;
+/*post formatting*/
+.glyphicon-chevron-up , .glyphicon-chevron-down  {
+	font-size: 20px!important;
+	position: relative;
+	left: -5px;
+	color: #888;
+}
 
-			}
-			#logout:hover{
-				background: #B31B1B !important;
-			  	text-decoration: none !important;
-			  	color: #B31B1B;
-			  	-webkit-transition: all .3s linear;
-			}
-			
-			label{
-				margin-bottom: 8px !important;
-				margin-top:4px !important;
-			}
-			 b{
-			 	font-size: large;
-			 }
-			 #status{
-			 	padding-top:8px;
-			 	padding-bottom:8px;
-			 }
-			 select#filter{
-			 	padding-top:10px;
-			 	padding-bottom:10px;
-			 }
+.active-vote .glyphicon{
+	color: #B31B1B!important;
+}
 
-			 .date{
-			 	margin-left: 30px;
-			 }
+.glyphicon-chevron-up:hover, .glyphicon-chevron-down:hover {
+	color: #000!important;
+	cursor: pointer;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 0px solid transparent !important;
+	border-radius: 0px !important;
+}
+/*end post formatting*/
+
+/*add post button*/
+a:hover{
+	text-decoration: none !important;
+}
+
+/*form formatting*/
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0px !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+select#category.form-control{
+	/*border-radius: 0px !important;*/
+}
+input[type="radio"], input[type="checkbox"] {
+    margin: 9px 0 0 !important;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+
+input#post-text.form-control{
+	height: 100px !important;
+}
+
+#loginWithGoogle{
+	margin-top: 20px;
+	border-style: none;
+  	border-radius: 0px !important;
+  	font-family: 'Raleway' !important;
+  	color: #ffffff !important;
+  	font-size: 14px !important;
+  	background-color: #B31B1B;;
+  	padding: 20px 50px!important;
+  	text-decoration: none !important;
+
+}
+
+
+label{
+	margin-bottom: 8px !important;
+	margin-top:4px !important;
+}
+ b{
+ 	font-size: large;
+ }
+ #status{
+ 	padding-top:8px;
+ 	padding-bottom:8px;
+ }
+ select#filter{
+ 	padding-top:10px;
+ 	padding-bottom:10px;
+ }
+
 
 
 /* profile css page styling*/
@@ -458,7 +425,11 @@ body{
 .footer{
 	text-align: center;
 	font-family: 'Raleway';
-	margin-top: 140px;
+	margin-top: 20px;
+}
+h1#welcome{
+	font-size: 24px;
+	color: #000;
 }
 
 /*end profile.html styling*/

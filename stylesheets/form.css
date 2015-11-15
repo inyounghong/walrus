@@ -2,6 +2,20 @@
 	text-align: center;
 }
 
+.float-r{
+	float: right;
+}
+
+#anonymous{
+	margin-right: 10px!important;
+}
+
+h2{
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
 .container{
 	position: relative;
 }
@@ -21,6 +35,12 @@
 	margin-bottom: 10px;
 }
 
+.form-border b{
+	font-size: 14px;
+	padding-top: 14px;
+	display: inline-block;
+}
+
 #post-form{
 	max-width: 500px;
 	margin: 0 auto;
@@ -37,21 +57,25 @@
 	border: none;
 	margin-top: 10px;
 	text-align: center;
+	padding: 10px;
 	text-transform: uppercase;
 }
 
 /* Add post button */
 
+.col-sm-4{
+	padding-left: 70px;
+}
+
 #add-post-button{
 	background: #B31B1B;
 	color: #fff;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-right: 40px;
-	padding-left: 40px;
+	padding: 10px 80px;
+	width: 100%;
 	display: inline-block;
 	margin-top: 0px;
 	margin-bottom: 40px;
+	border: 2px solid transparent;
 }
 
 #add-post-button:hover{
@@ -60,10 +84,22 @@
 	border-width: 2px;
 	border-color: #B31B1B;
 	color: #B31B1B;
-	-webkit-transition: all .3s linear;
+	-webkit-transition: all .2s linear;
 }
 
 /* List posts */
+
+.post-list-title{
+	left: 20px;
+	position: relative;
+	top: 20px;
+	display: inline-block;
+	
+}	
+
+.post-list-title .title{
+	font-size: 18px;
+}
 
 ul.post-list li{
 	list-style-type: none;
@@ -74,7 +110,23 @@ ul.post-list li{
 	position: relative;
 	background: #fff;
 	min-height: 80px;
-	padding: 10px 0;
+	padding: 10px 10px;
+}
+
+.status{
+	padding: 5px 10px;
+	font-size: 12px;
+	border-radius: 3px;
+}
+.status.closed{
+	background: #ddd;
+}
+.status.resolved{
+	background: #A1D668;
+	color: #fff;
+}
+.status.progress{
+	background: yellow;
 }
 
 .float-right{
@@ -92,21 +144,27 @@ ul.post-list li{
 	left: initial;
 }
 
+.edit-left #edit-dropdown{
+	left: 0 !important;
+}
+
 /* Comment Form */
 
 .comment-form{
 	margin-top: 20px;
 	min-height: 140px;	
+	max-width: 700px;
 }
 
 #comment-text{
 	width: 100%;
 	padding: 10px;
 	margin: 10px 0;
+	border: 1px solid #ccc;
 }
 
 #add-comment{
-	float: right;
+	margin-right: 20px;
 }
 
 /* Each comment */
@@ -116,6 +174,8 @@ ul.post-list li{
 	padding: 10px 0;
 	position: relative;
 	min-height: 70px;
+	max-width: 700px;
+	font-size: 16px;
 }
 
 .comment-user{
@@ -124,21 +184,53 @@ ul.post-list li{
 }
 
 .comment-body{
-	display: inline-block;
 	margin-left: 50px;
 	margin-top: 10px;
+	min-height: 80px;
 }
 
+.comment-message{
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+.post-wrap{
+	position: relative;
+	margin: 20px 0 40px;
+	min-height: 200px;
+	padding-right: 60px;
+	border-right: 1px solid #ddd;
+}
+
+.post-wrap .upvote-wrap{
+	top: 0;
+}
+
+.post-body{
+	margin-left: 80px;
+}
+
+.post-wrap .post-text{
+	font-size: 16px;
+	line-height: 1.7em;
+
+}
+
+#post-text{
+	min-height: 200px;
+}
 
 .comment-text{
 	
 }
 
+
+
 /* Upvoting */
 .upvote-wrap{
 	position: absolute;
-	left: 0;
-	top: 10px;
+	left: 10px;
+	top: 20px;
 	padding: 0 10px;
 }
 
@@ -146,4 +238,77 @@ ul.post-list li{
 
 .status-checks label{
 	display: block;
+}
+
+
+/* Category */
+
+.category-item{
+	margin: 20px 0;
+	position: relative;
+	padding: 10px 0;
+}
+
+.category-item .category-icon{
+	float:left;
+}
+
+.category-icon{
+	width: 60px;
+	display: inline-block;
+}
+
+.big-category-icon{
+	width: 80px;
+	display: inline-block;
+	
+	margin: 0!important;
+	margin-right: 20px!important;
+}
+
+.sidebar{
+	padding-left: 50px;
+	
+}
+
+.sidebar h3{
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.cat{
+	display: inline-block;
+	font-size: 16px;
+}
+
+.category-icon img, .big-category-icon img{
+	max-width: 100%;
+}
+
+.category-name{
+	text-transform: capitalize;
+	font-size: 18px;
+}
+
+.category-main{
+	margin-left: 90px;
+	margin-right: 60px;
+}
+
+.category-posts-count{
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	text-align: center;
+}
+
+.post-number{
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.post-icon{
+	margin-left: 50px;
+	margin-top: 10px;
 }

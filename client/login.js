@@ -11,9 +11,26 @@ Template.login.events( {
     });
   },
 
-  "click #logout": function (err, t){
-    Meteor.logout(function(err) {
+  
+});
 
-    });
+Template.menu.helpers({
+  isLogged: function(){
+    if (Meteor.userId() === null){
+      return false;
+    }
+    return true;
+  },
+
+  username: function(){
+    var name = Meteor.user().name;
+    return name.split(" ")[0];
   }
 });
+
+Template.menu.events({
+  "click #logout": function (err, t){
+    Meteor.logout(function(err) {
+    });
+  }
+})

@@ -8,6 +8,10 @@ Router.route('/', {
     template: 'login'
 });
 
+Router.route('/home', {
+    template: 'home'
+});
+
 Router.route('/posts', {
     template: 'index'
 });

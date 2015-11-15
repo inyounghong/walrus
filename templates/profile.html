@@ -1,5 +1,5 @@
 <template name="profile">
-	<div id="headerimageindex">
+	<div id="headerimageindex" class="header-image">
     	<h1 class="headertitle">Instigate Change</h1>
   	</div>
   	<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="col-sm-8">
 				<div id="userdisplay">
-					<h1> Welcome {{name}}!</h1>
+					<h1 id="welcome"> Welcome {{firstName}}!</h1>
 				</div>
 
 				
@@ -27,7 +27,7 @@
 
 				<h1> Active since</h1> 
 				<p> {{prettyDate createdAt}}</p>
-				<br><br>
+				
 				<h1>Email</h1>
 				<p> {{email}}</p>
 				<br><br>

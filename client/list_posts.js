@@ -1,7 +1,7 @@
 Meteor.subscribe("posts");
 Meteor.subscribe("categories");
 Meteor.subscribe("userData");
-
+Meteor.subscribe("comments");
 
 Template.index.helpers({
   posts: function() {
@@ -47,7 +47,7 @@ Template.index.helpers({
 
   tabs: function() {
     return Categories.find();
-  },
+  }
 
 
 
@@ -89,6 +89,34 @@ Template.list_post.helpers({
 
   hasRights: function(){
     return (Meteor.user().cornell || Meteor.user().admin);
+  },
+
+  showStatus: function(){
+    if (this.status == "open"){
+      return false;
+    }
+    return true;
+  },
+
+  previewText: function(){
+    if (this.text.length >= 300){
+      return this.text.substring(0, 300) + "..." ;
+    }
+    return this.text;
+  },
+
+  activeUpvote: function(){
+    if (Meteor.user().upvoted.indexOf(this._id) > -1){
+      return "active-vote";
+    }
+  },
+  activeDownvote: function(){
+    if (Meteor.user().downvoted.indexOf(this._id) > -1){
+      return "active-vote";
+    }
+  },
+  commentCount: function(){
+    return Comments.find({postId: this._id}).count();
   }
 });
 

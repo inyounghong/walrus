@@ -27,7 +27,7 @@ Meteor.methods({
     Meteor.users.update({_id: Meteor.userId}, {$addToSet: {postsMade: {"id": dat, "Title" : title}}});
     return dat;
   },
-  updatePost: function (id, text, cat, name, status) {
+  updatePost: function (id, title, text, cat, name, status) {
     var data = {
       category: cat,
       title: title,

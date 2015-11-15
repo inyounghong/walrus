@@ -54,6 +54,18 @@ Template.post_form.helpers({
 		if (Router.current().params._id === undefined){
 			return (Posts.findOne({_id: Router.current().params._id}).status == "closed");
 		} return false;
+	},
+	formTitle: function(){
+		if (Router.current().params._id === undefined){
+			return "Add a Post";
+		} 
+		return "Edit Post";
+	},
+	submitText: function(){
+		if (Router.current().params._id === undefined){
+			return "Submit Post";
+		} 
+		return "Update Post";
 	}
 });
 
@@ -73,9 +85,6 @@ Template.post_form.events({
 	    	var status = "open";
 	    }
 
-
-
-	    console.log(isAnon);
 	    // Require text and category
 		if (isEmpty(text) || category == "Category" || isEmpty(title)){
 			console.log("error");
@@ -96,6 +105,7 @@ Template.post_form.events({
 			}
 			else{
 				// Updating an existing post
+				console.log("updateing post");
 				Meteor.call("updatePost", Router.current().params._id, title, text, category, name, status, function(err, data){
 					console.log("ERRPR" + err);
 					Router.go("/post/" + Router.current().params._id);

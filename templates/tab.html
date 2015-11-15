@@ -3,26 +3,17 @@
 <template name= "tab">
 
 
-			<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-			<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
-			<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
-			<title>CU Change</title>
-			<link type="text/css" rel="stylesheet" href="../css/style.css">
-			<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+			
 	<div class="profileLink">
     <a href="/profile"> Profile </a>
   </div>
-	<div id="headerimage{{title}}">
+	<div id="headerimage{{titleraw}}" class="header-image">
 		<h1 class="headertitle">{{title}}</h1>
 		
 	</div>
 	{{> menu}}
 	
 	<div class="container">
-
-		<div class="c">
-			<a id="add-post-button" href="/post_form">Add Post</a>
-		</div>
 
 		<div class="row">
 			<!-- Post column -->
@@ -43,10 +34,12 @@
 
 	        <!-- sidebar column -->
 	        <div class="col-sm-4">
+
+	        	<div class="c">
+					<a id="add-post-button" href="/post_form">Add Post</a>
+				</div>
+				
 	        	<b>Sort By</b>
-	        	
-
-
 				<select class="form-control" id="category" required {{disabled}}>
 					<option value="all" selected>All Categories</option>
 					{{#each categories}}
@@ -61,7 +54,7 @@
 					<label><input type="checkbox" class="status-checkbox" value="open" checked> Open</label>
 					<label><input type="checkbox" class="status-checkbox" value="progress" checked> Progress</label>
 					<label><input type="checkbox" class="status-checkbox" value="resolved" checked> Resolved</label>
-					<label><input type="checkbox" class="status-checkbox" value="closed" checked> Closed</label>
+					<label><input type="checkbox" class="status-checkbox" value="closed"> Closed</label>
 				</div>
 	        </div>
 	      </div>

@@ -15,13 +15,14 @@ Template.profile.helpers({
 
 		return Comments.find({userId: Meteor.userId()}).count();
 	},
-
 	email: function(){
 		return Meteor.user().services.google.email;
 	},
 
 	post: function() {
 		return Meteor.user().postsMade;
+	firstName: function(){
+		return Meteor.user().services.google.given_name;
 	}
 });
 

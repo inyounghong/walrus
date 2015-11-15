@@ -1,11 +1,12 @@
 <template name="post_form">
-	<div class="profileLink">
-    <a href="/profile"> Profile </a>
-  </div>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+	<div id="headerimageindex" class="header-image">
+	    <h1 class="headertitle">Instigate Change</h1>
+	  </div>
 	{{> menu}}
 
-	<h2 class="c">Add a Post</h2>
+	<h2 class="c">{{formTitle}}</h2>
+
+
 	<div id="post-form" class="form-{{disabled}}">
 		<div class="form-border">
 			<div id="error"></div>
@@ -16,7 +17,7 @@
 					<b>Title</b>
 				</div>
 				<div class="col-sm-10">
-					<input type="title" name="title" id="post-title" placeholder="Title" class="form-control" value="{{title}}" {{disabled}}>
+					<input type="title" name="title" id="post-title" placeholder="Descriptive title for your concern" class="form-control" value="{{title}}" {{disabled}}>
 				</div>
 			</div>
 
@@ -25,14 +26,14 @@
 					<b>Post</b>
 				</div>
 				<div class="col-sm-10">
-					<textarea type="text" name="text" id="post-text" placeholder="Type to add new posts" class="form-control" {{disabled}}>{{text}}</textarea>
+					<textarea type="text" name="text" id="post-text" placeholder="Describe your concern." class="form-control" {{disabled}}>{{text}}</textarea>
 				</div>
 			</div>
 
 
 			<div class="row">
 				<div class="col-sm-2 form-label">
-					<b>Post</b>
+					<b>Category</b>
 				</div>
 				<div class="col-sm-10">
 					<select class="form-control" id="category" required {{disabled}}>
@@ -78,7 +79,7 @@
 			</div>
 		{{/if}}
 
-		<div class="form-control submit-post submit" {{disabled}}>Submit post</div>
+		<div class="submit-post submit" {{disabled}}>{{submitText}}</div>
 	</div>
 	{{#unless isLogged}}
 		<div id="please-login" class="c">

@@ -1,8 +1,17 @@
 <template name="menu">
 	<ul class="menu">
-		<li><a href="/">Home</a></li>
+		<li><a href="/home">Home</a></li>
+		<li><a href="/all">Posts</a></li>
 <!-- 		<li><a href="/academics">Academics</a></li>
 		<li><a href="/athletics">Athletics</a></li>
 		<li><a href="/maintenance">Maintenance</a></li> -->
+		{{#if isLogged}}
+			<li class="float-r" id="logout"><a>Logout</a></li>
+			<li id="profile-link"><a href="/profile">My Profile</a></li>
+			<li id="hey-greeting">Hey, {{username}}!</li>
+			
+		{{else }}
+			<li id="profile-link"><a href="/">Login </a></li>
+		{{/if}}
 	</ul>
 </template>

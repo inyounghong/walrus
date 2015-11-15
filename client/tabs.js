@@ -69,6 +69,10 @@ Template.tab.helpers( {
 			return "Instigate Change";
 		}
 		return this.subject;
+	},
+
+	titleraw:function(){
+		return this.subject;
 	}
 });
 

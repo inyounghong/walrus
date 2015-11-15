@@ -3,14 +3,13 @@
 	<link href = "https://fonts.googleapis.com/css?family=Raleway:300" rel = "stylesheet" type = "text/css">
 	<div class="comment">
 		<div class="upvote-wrap">
-			<div class="upvote-comment"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
+			<div class="upvote-comment {{activeUpvote}}"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
     		<div class="votes">{{votes}}</div>
-    		<div class="downvote-comment"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
+    		<div class="downvote-comment {{activeDownvote}}"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
     	</div>
 
     	<div class="comment-body">
-			
-			
+
 			<div class="comment-text">
 				<span class="comment-user">{{name}}</span>
 				<span class="comment-date">{{prettyDate createdAt}}</span>
@@ -18,7 +17,7 @@
 			</div>
 
 			{{#unless deleted}}
-				<div class="btn-group edit-menu">
+				<div class="btn-group edit-menu float-right">
 			      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			        Delete <span class="caret"></span>
 			      </button>
