@@ -47,6 +47,9 @@ body{
 				padding-right: 70px;
 
 			}
+			#voting{
+				margin-left: 30%
+			}
 
 			ul.menu li a:hover{
 				background-color: #fff;
