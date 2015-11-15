@@ -3,7 +3,7 @@ Meteor.publish("comments", function () {
 });
 
 Meteor.methods({
-  addComment: function (text) {
+  addComment: function (text, name, post_id) {
     // Make sure the user is logged in before inserting a task
     // if (! Meteor.userId()) {
     //   throw new Meteor.Error("not-authorized");
@@ -15,8 +15,9 @@ Meteor.methods({
       createdAt: new Date(),
       userId: Meteor.userId(),
       votes: 0,
-      anonymous: false,
-      deleted: false
+      name: name,
+      deleted: false,
+      postId: post_id
     });
   },
 

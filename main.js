@@ -6,6 +6,13 @@ if (Meteor.isServer) {
 	})
 }
 
+if (Meteor.isClient){
+	Template.registerHelper('prettyDate', function(date){
+		return moment(new Date(date)).format('MMM DD, YYYY');
+	});
+
+}
+
 function initialize(collection) {
 	var categories = ["academics","athletics","maintenance"];
 	for(i = 0; i < categories.length; i++ ){
@@ -16,3 +23,4 @@ function initialize(collection) {
 		}
 	}
 }
+

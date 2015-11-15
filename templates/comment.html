@@ -12,8 +12,9 @@
 			
 			
 			<div class="comment-text">
-				<span class="comment-user">{{userId}}</span>
-				{{text}}
+				<span class="comment-user">{{name}}</span>
+				<span class="comment-date">{{prettyDate createdAt}}</span>
+				<div class="comment-message">{{text}}</div>
 			</div>
 
 			{{#unless deleted}}

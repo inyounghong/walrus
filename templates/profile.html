@@ -1,0 +1,34 @@
+<template name="profile">
+	<div id="headerimageindex">
+    	<h1 class="headertitle">Instigate Change</h1>
+  	</div>
+
+	{{> menu}}
+	<div id="topbar">
+		<div id="userdisplay">
+			<h1> Welcome {{this.name}}!</h1>
+		</div>
+
+		<div id="numupvotes">
+			<h1> (insert number of upvotes)</h1>
+		</div>
+		<img class="upvoteassign" src="../images/upvoteicon.png">
+			<img class="commentassign" src="../images/comment.png">
+		<div id="numcomments">
+			<h1> (insert number of comments)</h1>
+		</div>
+	</div>
+
+	<div id="rightcolumn">
+		<h1> Active since</h1> 
+		<p> (insert time stamp)</p>
+		<br><br>
+		<h1>Email</h1>
+		<p> (insert email)</p>
+		<br><br>
+		<h1> Number of resolved posts</h1>
+		<p>(insert number of resolved posts)</p>
+
+		<img class= "babylogo" src="../images/logo.png">
+	</div>
+</template>

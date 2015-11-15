@@ -13,20 +13,31 @@
 	padding: 10px 20px;
 }
 
+/* Forms */
+
+.form-border{
+	padding: 10px 20px;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+
 #post-form{
 	max-width: 500px;
 	margin: 0 auto;
 }
 
 .form-control{
-	margin: 5px 0;
+	margin: 8px 0;
+	border-radius: 0!important;
 }
 
 .submit{
 	background: #B31B1B;
 	color: #fff;
 	border: none;
+	margin-top: 10px;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 /* Add post button */
@@ -34,9 +45,19 @@
 #add-post-button{
 	background: #B31B1B;
 	color: #fff;
-	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 40px;
+	padding-left: 40px;
 	display: inline-block;
-	margin: 10px 0;
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+
+#add-post-button:hover{
+	background-color: #fff;
+	color: #B31B1B;
+	-webkit-transition: all .3s linear;
 }
 
 /* List posts */
@@ -53,10 +74,14 @@ ul.post-list li{
 	padding: 10px 0;
 }
 
-.edit-menu{
+.float-right{
 	position: absolute;
 	top: 10px;
 	right: 10px;
+}
+
+.edit-menu{
+	display: inline-block;
 }
 
 #edit-dropdown{
@@ -98,6 +123,7 @@ ul.post-list li{
 .comment-body{
 	display: inline-block;
 	margin-left: 50px;
+	margin-top: 10px;
 }
 
 
@@ -106,11 +132,15 @@ ul.post-list li{
 }
 
 /* Upvoting */
-
-
 .upvote-wrap{
 	position: absolute;
 	left: 0;
 	top: 10px;
 	padding: 0 10px;
+}
+
+/* Sidebar */
+
+.status-checks label{
+	display: block;
 }

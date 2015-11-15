@@ -12,6 +12,14 @@ Router.route('/posts', {
     template: 'index'
 });
 
+// Profile page
+Router.route('/profile', {
+    template: 'profile',
+    data: function(){
+        return Meteor.user();
+    }
+});
+
 // POST ROUTES
 
 // Add post page
