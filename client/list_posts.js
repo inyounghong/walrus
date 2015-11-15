@@ -1,5 +1,6 @@
 Meteor.subscribe("posts");
 Meteor.subscribe("categories");
+Meteor.subscribe("userData");
 
 
 Template.index.helpers({
@@ -65,9 +66,20 @@ Template.list_post.helpers({
   },
 
   "click .Upvote" : function (event) {
-    Meteor.call("upvotePost", this._id);
-  },
+    Meteor.call("upvotePostToUser", Meteor.user(), this._id, function(error,data){
+      if (data != null){
+           Meteor.call("upvotePost", data[0],data[1]);
+         }
+    });
+      
+    },
+
   "click .Downvote" : function(event) {
-    Meteor.call("downvotePost", this._id);
+     Meteor.call("downvotePostToUser",Meteor.user(),this._id, function(error,data){
+        if (data!= null) {
+          Meteor.call("downvotePost", data[0],data[1]);
+        }
+    });
+    
   }
 });
