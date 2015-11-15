@@ -10,17 +10,21 @@ Meteor.methods({
     // }
   
     // Insert a post record
-    Comments.insert({
+    var postid = Comments.insert({
       text: text,
       createdAt: new Date(),
       userId: Meteor.userId(),
       votes: 0,
       name: name,
       deleted: false,
-      postId: post_id
+      postId: post_id,
+      replies: []
     });
+    return postid;
   },
-
+  addReply: function (commentId,replyId) {
+    Comments.update({_id: commentId}, {$addToSet: {replies: replyId}});
+  },
   deleteComment: function (commentId) {
     Comments.update(commentId, {$set: 
       {

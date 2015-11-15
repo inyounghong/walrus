@@ -26,6 +26,18 @@
 			      </ul>
 			    </div>
 			{{/unless}}
+			{{#each replies}}
+				{{> reply}}
+			{{/each}}
+			<div class="comment-form">
+        <textarea type="text" name="text" id="reply-text" placeholder="Add reply"></textarea>
+        <button id="add-reply" class="button">Reply</button>
+        <label>
+          <input type="checkbox" id="anonymous" name="anonymous"/>
+          Reply Anonymously
+        </label>
+        
+      </div>
 		</div>
 	</div>
 

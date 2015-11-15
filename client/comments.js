@@ -18,8 +18,42 @@ Template.comment.helpers({
     if (Meteor.user().downvoted.indexOf(this._id) > -1){
       return "active-vote";
     }
+  },
+
+  replies: function() {
+    var ids = Comments.findOne({_id: this._id}).replies;
+    var result = [];
+    for (i = 0; i < ids.length; i++ ) {
+      var temp = Comments.findOne({_id: ids[i]});
+      result.push(temp);
+    }
+    return result;
   }
-})
+});
+
+Template.comment.events( {
+
+  "click #add-reply" : function(event ) {
+    var text = document.getElementById("reply-text").value;
+    var isAnonymous = document.getElementById("anonymous").checked;
+    var commId = this._id;
+    console.log(this);
+    if (isAnonymous){
+      var name = "Anonymous";
+    } else{
+      var name = Meteor.user().services.google.name;
+    }
+    if (text != ""){
+      console.log("hi");
+      Meteor.call("addComment", text, name, null, function(error,data){
+        if (data){
+          document.getElementById("reply-text").value = "";
+          Meteor.call("addReply", commId, data);
+        }
+      });
+    }
+  }
+});
 
 Template.post.events({
 
