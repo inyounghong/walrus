@@ -6,6 +6,16 @@
 	float: right;
 }
 
+#anonymous{
+	margin-right: 10px!important;
+}
+
+h2{
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
 .container{
 	position: relative;
 }
@@ -25,6 +35,12 @@
 	margin-bottom: 10px;
 }
 
+.form-border b{
+	font-size: 14px;
+	padding-top: 14px;
+	display: inline-block;
+}
+
 #post-form{
 	max-width: 500px;
 	margin: 0 auto;
@@ -41,16 +57,21 @@
 	border: none;
 	margin-top: 10px;
 	text-align: center;
+	padding: 10px;
 	text-transform: uppercase;
 }
 
 /* Add post button */
 
+.col-sm-4{
+	padding-left: 70px;
+}
+
 #add-post-button{
 	background: #B31B1B;
 	color: #fff;
 	padding: 10px 80px;
-
+	width: 100%;
 	display: inline-block;
 	margin-top: 0px;
 	margin-bottom: 40px;
@@ -123,6 +144,10 @@ ul.post-list li{
 	left: initial;
 }
 
+.edit-left #edit-dropdown{
+	left: 0 !important;
+}
+
 /* Comment Form */
 
 .comment-form{
@@ -139,7 +164,7 @@ ul.post-list li{
 }
 
 #add-comment{
-
+	margin-right: 20px;
 }
 
 /* Each comment */
@@ -161,10 +186,12 @@ ul.post-list li{
 .comment-body{
 	margin-left: 50px;
 	margin-top: 10px;
+	min-height: 80px;
 }
 
 .comment-message{
 	margin-top: 10px;
+	font-size: 15px;
 }
 
 .post-wrap{
@@ -186,6 +213,11 @@ ul.post-list li{
 .post-wrap .post-text{
 	font-size: 16px;
 	line-height: 1.7em;
+
+}
+
+#post-text{
+	min-height: 200px;
 }
 
 .comment-text{
@@ -260,6 +292,7 @@ ul.post-list li{
 
 .category-main{
 	margin-left: 90px;
+	margin-right: 60px;
 }
 
 .category-posts-count{

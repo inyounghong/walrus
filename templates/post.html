@@ -13,15 +13,16 @@
         <div class="col-sm-9">
           <div class="post-wrap">
             <div class="upvote-wrap">
-              <div class="Upvote"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
+              <div class="Upvote {{activeUpvote}}"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
               <div class="votes">{{votes}}</div>
-              <div class="Downvote"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
+              <div class="Downvote {{activeDownvote}}"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
             </div>
 
             <div class="post-body">
               <h1>{{title}}</h1>
               <div class="post-text">{{text}}</div>
             </div>
+            
           </div>
         </div>
 
@@ -32,13 +33,30 @@
           </div>
           <div class="cat">{{category}}</div>
 
-          <br><br>
+          {{#if hasAuth}}
+          <div class="btn-group edit-menu edit-left" >
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Edit <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="edit-dropdown">
+              <li><a href="edit/{{_id}}" class="edit">Edit</a></li>
+              <li><a class="delete">Delete</a></li>
+            </ul>
+          </div>
+        {{/if}}
+
+          
           <h3>Submitted By</h3>
           {{name}}
 
           <br>
           <h3>Date Submitted</h3>
           {{prettyDate createdAt}}
+
+          <h3>Status</h3>
+          {{status}}
+          
+          
         </div>
 
     </div>
@@ -54,6 +72,9 @@
         </label>
         
       </div>
+
+      <br>
+      <h2>Comments ({{commentCount}})</h2>
 
      	{{#each comments}}
      		{{> comment}}

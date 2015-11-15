@@ -7,11 +7,28 @@ Template.post.helpers({
 
 });
 
+Template.comment.helpers({
+  activeUpvote: function(){
+    console.log(this._id);
+    if (Meteor.user().upvoted.indexOf(this._id) > -1){
+      return "active-vote";
+    }
+  },
+  activeDownvote: function(){
+    if (Meteor.user().downvoted.indexOf(this._id) > -1){
+      return "active-vote";
+    }
+  }
+})
+
 Template.post.events({
 
   "click .Upvote" : function (event) {
-    Meteor.call("upvotePostToUser", Meteor.user(), this._id, function(error,data){
+    console.log(this);
+    Meteor.call("upvotePostToUser", Meteor.user(), this._id , function(error,data){
       if (data != null){
+            console.log(data[0]);
+            console.log(data[1]);
            Meteor.call("upvotePost", data[0],data[1]);
          }
     });
@@ -19,7 +36,7 @@ Template.post.events({
     },
 
   "click .Downvote" : function(event) {
-     Meteor.call("downvotePostToUser",Meteor.user(),this._id, function(error,data){
+     Meteor.call("downvotePostToUser", Meteor.user(), this._id, function(error,data){
         if (data!= null) {
           Meteor.call("downvotePost", data[0],data[1]);
         }

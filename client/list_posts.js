@@ -1,7 +1,7 @@
 Meteor.subscribe("posts");
 Meteor.subscribe("categories");
 Meteor.subscribe("userData");
-
+Meteor.subscribe("comments");
 
 Template.index.helpers({
   posts: function() {
@@ -47,8 +47,7 @@ Template.index.helpers({
 
   tabs: function() {
     return Categories.find();
-  },
-
+  }
 
 
 
@@ -115,6 +114,9 @@ Template.list_post.helpers({
     if (Meteor.user().downvoted.indexOf(this._id) > -1){
       return "active-vote";
     }
+  },
+  commentCount: function(){
+    return Comments.find({postId: this._id}).count();
   }
 });
 
