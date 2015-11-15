@@ -14,6 +14,10 @@ Template.tab.helpers( {
 		else if (filter == "Oldest") {
 			return Posts.find({category: this.subject}, {sort: {createdAt: 1}});
 		}
+
+		else if (filter == "Newest" ) {
+			return Posts.find({category: this.subject}, {sort: {createdAt: -1}});
+		}
 	},
 
 	title: function(){
@@ -25,7 +29,11 @@ Template.tab.helpers( {
 	},
 
 	oldestIsSelected: function() {
-		return Session.get("filter") == "Oldest"
+		return Session.get("filter") == "Oldest";
+	},
+
+	newestIsSelected: function() {
+		return Session.get("filter") == "Newest";
 	}
 });
 
