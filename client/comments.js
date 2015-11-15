@@ -55,8 +55,11 @@ Template.post.events({
       var name = Meteor.user().services.google.name;
     }
 
-    Meteor.call("addComment", text, name, this._id);
-    document.getElementById("comment-text").value = "";
+    if (text != ""){
+      Meteor.call("addComment", text, name, this._id);
+      document.getElementById("comment-text").value = "";
+    }
+    
   },
 
   "click .delete": function () {
