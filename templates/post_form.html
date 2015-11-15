@@ -2,36 +2,42 @@
 
 	{{> menu}}
 
-	{{#if isLogged}}
-		<div id="post-form">
-			<h2>Add a Post</h2>
-			<div id="error"></div>
+	<h2 class="c">Add a Post</h2>
+	<div id="post-form" class="form-border form-{{disabled}}">
+	
+		<div id="error"></div>
 
-			<input type="title" name="title" id="post-title" placeholder="Title" class="form-control" value="{{title}}"/>
-			<input type="text" name="text" id="post-text" placeholder="Type to add new posts" class="form-control" value="{{text}}"/>
+		<input type="title" name="title" id="post-title" placeholder="Title" class="form-control" value="{{title}}" {{disabled}}>
+		<input type="text" name="text" id="post-text" placeholder="Type to add new posts" class="form-control" value="{{text}}" {{disabled}}>
 
-			<select class="form-control" id="category" required>
-				<option selected disabled>Category</option>
-				{{#each categories}}
-				<option value="{{name}}" selected="{{isSelected}}">{{name}}</option>
-				{{/each}}
-			</select>
-
-
-			  <label>
-			  	<input type="checkbox" id="anonymous">Post Anonymously
-			  </label>
+		<select class="form-control" id="category" required {{disabled}}>
+			<option selected disabled>Category</option>
+			{{#each categories}}
+			<option value="{{name}}" selected="{{isSelected}}">{{name}}</option>
+			{{/each}}
+		</select>
 
 
-			<select class="form-control" id="status" required>
+		  <label>
+		  	<input type="checkbox" id="anonymous" {{disabled}}>Post Anonymously
+		  </label>
+
+		{{#if isAdmin}}
+			<select class="form-control" id="status" required {{disabled}}>
 			 <option value="open" selected="{{openSelected}}">Open</option>
 			 <option value="progress" selected="{{progressSelected}}">In Progress</option>
 			 <option value="resolved" selected="{{resolvedSelected}}">Resolved</option>
 			 <option value="closed" selected="{{closedSelected}}">Closed</option>
 			</select>
+		{{/if}}
 
-			<div class="form-control submit-post submit">Submit post</div>
+		<div class="form-control submit-post submit" {{disabled}}>Submit post</div>
+	</div>
+	{{#unless isLogged}}
+		<div id="please-login" class="c">
+			Please login to post your concerns!
 		</div>
-	{{/if}}
+
+	{{/unless}}
 
 </template>

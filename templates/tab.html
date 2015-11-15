@@ -17,6 +17,29 @@
 	
 	<div class="container">
 
-		{{>postList}}
+		<div class="c">
+			<a id="add-post-button" href="/post_form">Add Post!</a>
+		</div>
+
+		<div class="row">
+			<!-- Post column -->
+	        <div class="col-sm-8">
+
+	          <ul id="Posts" class="post-list">
+	            {{#each posts}}
+	              <li> {{> list_post}}</li>
+	            {{/each}}
+	          </ul>
+	        </div>
+
+	        <!-- sidebar column -->
+	        <div class="col-sm-4">
+	        	<select id = "filter" class="form-control"> 
+					<option value = "Top" selected = {{topIsSelected}}> Top</option>
+					<option value = "Oldest" selected = {{oldestIsSelected}}> Oldest</option>
+					<option value = "Newest" selected = {{newestIsSelected}}> Newest</option>
+				</select>
+	        </div>
+	      </div>
 	  </div>
 </template>

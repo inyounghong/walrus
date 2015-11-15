@@ -14,7 +14,9 @@ Template.index.helpers({
 
   tabs: function() {
     return Categories.find();
-  }
+  },
+
+
 
 });
 
@@ -36,6 +38,15 @@ Template.list_post.helpers({
   // Returns name of poster
   name: function (){
     return this.userId;
+  },
+
+  isCornell: function(){
+    console.log(Meteor.user());
+    return Meteor.user().cornell;
+  },
+
+  hasRights: function(){
+    return (Meteor.user().cornell || Meteor.user().admin);
   }
 });
 

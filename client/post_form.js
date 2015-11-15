@@ -7,6 +7,20 @@ Template.post_form.helpers({
 	    return !(Meteor.userId() === null);
 	},
 
+	isAdmin: function(){
+		if (Meteor.user() != undefined){
+			return Meteor.user().admin;
+		}
+	},
+
+	// Disables post form if not cornell
+	disabled: function(){
+		if (Meteor.user() === null || !Meteor.user().cornell){
+			return "disabled";
+		} 
+		return "";
+	},
+
 	categories: function() {
 	    return Categories.find();
 	  },

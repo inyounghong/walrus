@@ -21,16 +21,17 @@
       <span class="status">Status: {{status}}</span>
       <span class="date">Date: {{createdAt}}</span>
 
-
-      <div class="btn-group edit-menu" >
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Edit <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" id="edit-dropdown">
-          <li><a href="post/edit/{{_id}}" class="edit">Edit</a></li>
-          <li><a class="delete">Delete</a></li>
-        </ul>
-      </div>
+      {{#if isCornell}}
+        <div class="btn-group edit-menu" >
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Edit <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" id="edit-dropdown">
+            <li><a href="post/edit/{{_id}}" class="edit">Edit</a></li>
+            <li><a class="delete">Delete</a></li>
+          </ul>
+        </div>
+      {{/if}}
     </div>
 
   </div>
