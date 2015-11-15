@@ -38,8 +38,11 @@ Meteor.methods({
 				count = 2
 			};
 			return [id,count];
+		}
+		else{
+			Meteor.users.update({_id: user._id}, {$pull: {upvoted: id}});
+			return [id,-1];
 		};
-		return null;
 	},
 
 	downvotePostToUser: function(user,id) {
@@ -54,7 +57,10 @@ Meteor.methods({
 				//downvotePost(id);
 			};
 			return [id,count];
+		}
+		else{
+			Meteor.users.update({_id: user._id}, {$pull: {downvoted: id}});
+			return [id,-1];
 		};
-		return null;
 	}
 });
