@@ -14,6 +14,7 @@ ServiceConfiguration.configurations.insert({
 
 Accounts.onCreateUser(function (options, user) {
   	if (Meteor.isServer){
+  		user.postsMade = [];
 		user.upvoted = [];
 		user.downvoted = [];
 		user.admin = false;
