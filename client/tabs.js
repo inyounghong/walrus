@@ -8,12 +8,16 @@ Template.tab.helpers( {
 			filter = "Top";
 		}
 		if (filter == "Top"){
-			console.log(this.subject);
+			
 			return Posts.find({category: this.subject}, {sort: {votes: -1}});
 		}
 
 		else if (filter == "Oldest") {
 			return Posts.find({category: this.subject}, {sort: {createdAt: 1}});
+		}
+
+		else if (filter == "Newest" ) {
+			return Posts.find({category: this.subject}, {sort: {createdAt: -1}});
 		}
 	},
 
@@ -22,7 +26,11 @@ Template.tab.helpers( {
 	},
 
 	oldestIsSelected: function() {
-		return Session.get("filter") == "Oldest"
+		return Session.get("filter") == "Oldest";
+	},
+
+	newestIsSelected: function() {
+		return Session.get("filter") == "Newest";
 	}
 });
 
