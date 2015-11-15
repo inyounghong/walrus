@@ -25,6 +25,16 @@ Meteor.methods({
     };
     return Posts.insert(data);
   },
+  updatePost: function (id, text, cat, anon) {
+    var data = {
+      category: "academic",
+      text: text,
+      category: cat,
+      status: "open",
+      anonymous: anon
+    };
+    return Posts.update(id, {$set: data});
+  },
   deletePost: function (postId) {
     Posts.remove(postId);
   },
