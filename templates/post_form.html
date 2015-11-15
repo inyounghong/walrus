@@ -3,32 +3,74 @@
 	{{> menu}}
 
 	<h2 class="c">Add a Post</h2>
-	<div id="post-form" class="form-border form-{{disabled}}">
-	
-		<div id="error"></div>
+	<div id="post-form" class="form-{{disabled}}">
+		<div class="form-border">
+			<div id="error"></div>
 
-		<input type="title" name="title" id="post-title" placeholder="Title" class="form-control" value="{{title}}" {{disabled}}>
-		<input type="text" name="text" id="post-text" placeholder="Type to add new posts" class="form-control" value="{{text}}" {{disabled}}>
+			<div class="row">
+				<div class="col-sm-2 form-label">
+					<b>Title</b>
+				</div>
+				<div class="col-sm-10">
+					<input type="title" name="title" id="post-title" placeholder="Title" class="form-control" value="{{title}}" {{disabled}}>
+				</div>
+			</div>
 
-		<select class="form-control" id="category" required {{disabled}}>
-			<option selected disabled>Category</option>
-			{{#each categories}}
-			<option value="{{name}}" selected="{{isSelected}}">{{name}}</option>
-			{{/each}}
-		</select>
+			<div class="row">
+				<div class="col-sm-2 form-label">
+					<b>Post</b>
+				</div>
+				<div class="col-sm-10">
+					<textarea type="text" name="text" id="post-text" placeholder="Type to add new posts" class="form-control" {{disabled}}>{{text}}</textarea>
+				</div>
+			</div>
 
-
-		  <label>
-		  	<input type="checkbox" id="anonymous" {{disabled}}>Post Anonymously
-		  </label>
+			<div class="row">
+				<div class="col-sm-2 form-label">
+					<b>Post</b>
+				</div>
+				<div class="col-sm-10">
+					<select class="form-control" id="category" required {{disabled}}>
+						<option selected disabled>Category</option>
+						{{#each categories}}
+							<option value="{{name}}" selected="{{isSelected}}">{{name}}</option>
+						{{/each}}
+					</select>
+				</div>
+			</div>
+					
+			<div class="row">
+				<div class="col-sm-2 form-label">
+				</div>
+				<div class="col-sm-10">
+					<label>
+			  			<input type="checkbox" id="anonymous" {{disabled}}>Post Anonymously
+					</label>
+				</div>
+			</div>
+			
+		</div>
 
 		{{#if isAdmin}}
-			<select class="form-control" id="status" required {{disabled}}>
-			 <option value="open" selected="{{openSelected}}">Open</option>
-			 <option value="progress" selected="{{progressSelected}}">In Progress</option>
-			 <option value="resolved" selected="{{resolvedSelected}}">Resolved</option>
-			 <option value="closed" selected="{{closedSelected}}">Closed</option>
-			</select>
+			<div class="form-border">
+
+				<div class="row">
+					<div class="col-sm-2 form-label">
+						<b>Status</b>
+					</div>
+					<div class="col-sm-10">
+						<select class="form-control" id="status" required {{disabled}}>
+							 <option value="open" selected="{{openSelected}}">Open</option>
+							 <option value="progress" selected="{{progressSelected}}">In Progress</option>
+							 <option value="resolved" selected="{{resolvedSelected}}">Resolved</option>
+							 <option value="closed" selected="{{closedSelected}}">Closed</option>
+						</select>
+					</div>
+				</div>
+				
+					
+				
+			</div>
 		{{/if}}
 
 		<div class="form-control submit-post submit" {{disabled}}>Submit post</div>

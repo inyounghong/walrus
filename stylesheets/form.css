@@ -13,20 +13,31 @@
 	padding: 10px 20px;
 }
 
+/* Forms */
+
+.form-border{
+	padding: 10px 20px;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+
 #post-form{
 	max-width: 500px;
 	margin: 0 auto;
 }
 
 .form-control{
-	margin: 5px 0;
+	margin: 8px 0;
+	border-radius: 0!important;
 }
 
 .submit{
 	background: #B31B1B;
 	color: #fff;
 	border: none;
+	margin-top: 10px;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 /* Add post button */
