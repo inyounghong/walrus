@@ -13,3 +13,9 @@
 	border: none;
 	text-align: center;
 }
+
+.list_post{
+	border: 1px solid #ddd;
+	padding: 10px;
+	background: #fff;
+}
