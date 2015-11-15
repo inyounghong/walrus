@@ -1,6 +1,11 @@
 <!-- different tabs -->
 
 <template name= "tab">
+	<div id="headerimageacademics">
+		<h1 class="headertitle">Academics</h1>
+		<i class="fa fa-book" style="font-size:36px;color:white"></i>
+	</div>
+	{{> menu}}
 	<select id = "filter" > 
 		<option value = "Top" selected = {{topIsSelected}}> Top</option>
 		<option value = "Oldest" selected = {{oldestIsSelected}}> Oldest</option>

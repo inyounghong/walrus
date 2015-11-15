@@ -1,14 +1,33 @@
 <template name="index">
+  <div id="header_images">
+    <img class="logo1" src="../images/logo.png">
+    <a href="http://www.cornellsa.com">
+    <img class="logo2" src="../images/salogo.png">
+    </a>
+    <div id="login">
+    <a href="index.html">
+    <div id="subtitle"><h2>Sign In</h2></div>
+    </a>
+    </div>
+
+  </div> 
+
+
+  <div id="hero_image">
+    <div id="welcome_text"> 
+      <h1 id="instigate">Instigate Change</h1><!--welcome-->
+      
+    </div> <!--welcome_text-->
+  </div> <!-- hero_image -->
+  {{> menu}}
+
   <div class="container">
-    <header>
-      <h1>Post List </h1>
 
 
-      <button id="loginWithGoogle">Login with Google</button>
-      <button id="logout">Logout</button>
+      
       
       <a href="/post_form">Add Post!</a>
-    </header>
+
       {{#each tabs}}
         <a href="/{{name}}">{{name}}</a>
       {{/each}}
