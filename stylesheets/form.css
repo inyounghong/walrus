@@ -45,9 +45,19 @@
 #add-post-button{
 	background: #B31B1B;
 	color: #fff;
-	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 40px;
+	padding-left: 40px;
 	display: inline-block;
-	margin: 10px 0;
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+
+#add-post-button:hover{
+	background-color: #fff;
+	color: #B31B1B;
+	-webkit-transition: all .3s linear;
 }
 
 /* List posts */
@@ -113,6 +123,7 @@ ul.post-list li{
 .comment-body{
 	display: inline-block;
 	margin-left: 50px;
+	margin-top: 10px;
 }
 
 
@@ -121,8 +132,6 @@ ul.post-list li{
 }
 
 /* Upvoting */
-
-
 .upvote-wrap{
 	position: absolute;
 	left: 0;

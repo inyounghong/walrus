@@ -1,11 +1,12 @@
 <template name="post_form">
-
+	<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 	{{> menu}}
 
 	<h2 class="c">Add a Post</h2>
 	<div id="post-form" class="form-{{disabled}}">
 		<div class="form-border">
 			<div id="error"></div>
+
 
 			<div class="row">
 				<div class="col-sm-2 form-label">
@@ -24,6 +25,7 @@
 					<textarea type="text" name="text" id="post-text" placeholder="Type to add new posts" class="form-control" {{disabled}}>{{text}}</textarea>
 				</div>
 			</div>
+
 
 			<div class="row">
 				<div class="col-sm-2 form-label">
