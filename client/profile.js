@@ -14,6 +14,10 @@ Template.profile.helpers({
 	commentCount: function(){
 
 		return Comments.find({userId: Meteor.userId()}).count();
+	},
+
+	firstName: function(){
+		return Meteor.user().services.google.given_name;
 	}
 });
 

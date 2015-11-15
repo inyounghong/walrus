@@ -17,3 +17,17 @@ Template.login.events( {
     });
   }
 });
+
+Template.menu.helpers({
+  isLogged: function(){
+    if (Meteor.userId() === undefined){
+      return false;
+    }
+    return true;
+  },
+
+  username: function(){
+    var name = Meteor.user().name;
+    return name.split(" ")[0];
+  }
+})
