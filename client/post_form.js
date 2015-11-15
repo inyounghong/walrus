@@ -14,15 +14,30 @@ Template.post_form.helpers({
 	isSelected: function(){
 		var post = Posts.findOne({_id: Router.current().params._id});
 		return (this.name == post.category);
+	},
+
+	openSelected: function(){
+		return (Posts.findOne({_id: Router.current().params._id}).status == "open");
+	},
+	progressSelected: function(){
+		return (Posts.findOne({_id: Router.current().params._id}).status == "progress");
+	},
+	resolvedSelected: function(){
+		return (Posts.findOne({_id: Router.current().params._id}).status == "resolved");
+	},
+	closedSelected: function(){
+		return (Posts.findOne({_id: Router.current().params._id}).status == "closed");
 	}
 });
 
 Template.post_form.events({
+
 	"click .submit-post": function (event) {
 		console.log(this._id);
 		var text = document.getElementById("post-text").value;
 	    var isAnon = document.getElementById("anonymous").checked;
 	    var category = document.getElementById("category").value;
+	    var status = document.getElementById("status").value;
 
 	    console.log(isAnon);
 	    // Require text and category
@@ -34,13 +49,13 @@ Template.post_form.events({
 			if (Router.current().params._id === undefined){
 				// Adding a new post
 				console.log("adding post");
-				Meteor.call("addPost", text, category, isAnon, function(err, data){
+				Meteor.call("addPost", text, category, isAnon, status, function(err, data){
 					Router.go("/post/" + data);
 				});
 			}
 			else{
 				// Updating an existing post
-				Meteor.call("updatePost", Router.current().params._id, text, category, isAnon, function(err, data){
+				Meteor.call("updatePost", Router.current().params._id, text, category, isAnon, status, function(err, data){
 					Router.go("/post/" + Router.current().params._id);
 				});
 			}
