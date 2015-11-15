@@ -123,6 +123,9 @@ body{
 				padding-right: 70px;
 
 			}
+			#voting{
+				margin-left: 30%
+			}
 
 			ul.menu li a:hover{
 				background-color: #fff;
@@ -147,6 +150,7 @@ body{
 			}
 			h1.headertitle{
 				text-align: center;
+				text-transform: capitalize;
 				color: white;
 				padding-top: 9%;
 				font-size: 300%;
