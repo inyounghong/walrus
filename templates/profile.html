@@ -6,16 +6,16 @@
 	{{> menu}}
 	<div id="topbar">
 		<div id="userdisplay">
-			<h1> Welcome {{this.name}}!</h1>
+			<h1> Welcome {{name}}!</h1>
 		</div>
 
 		<div id="numupvotes">
-			<h1> (insert number of upvotes)</h1>
+			<h1> {{upvoteCount}}</h1>
 		</div>
 		<img class="upvoteassign" src="../images/upvoteicon.png">
 			<img class="commentassign" src="../images/comment.png">
 		<div id="numcomments">
-			<h1> (insert number of comments)</h1>
+			<h1> Comments: {{commentCount}}</h1>
 		</div>
 	</div>
 
@@ -31,4 +31,16 @@
 
 		<img class= "babylogo" src="../images/logo.png">
 	</div>
+
+	<div id="admin-error"></div>
+	<input type="text" id="netId">
+	<div class="add-admin">Add Admin</div>
+
+	{{#each admins}}
+		<div class="admin">
+			{{name}} {{_id}} 
+			<div class="remove-admin">Remove</div>
+		</div>
+	{{/each}}
+
 </template>

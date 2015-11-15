@@ -1,5 +1,5 @@
 Meteor.publish("userData", function () {
-  return Meteor.users.find({_id: this.userId});
+  return Meteor.users.find();
 });
 
 ServiceConfiguration.configurations.remove({
@@ -17,6 +17,7 @@ Accounts.onCreateUser(function (options, user) {
 		user.upvoted = [];
 		user.downvoted = [];
 		user.admin = false;
+		user.name = user.services.google.name;
 		var email = user.services.google.email;
 		var domain = email.split("@");
 		user.netId = domain[0];
@@ -36,6 +37,9 @@ Accounts.onCreateUser(function (options, user) {
 });
 
 Meteor.methods({
+	setAdmin: function (netId, isAdmin){
+		return Meteor.users.update({netId: netId}, {$set: {admin: isAdmin}});
+	},
 	upvotePostToUser: function(user,id) {
 		count = 0;
 		if(Meteor.users.findOne({_id: user._id}).upvoted.indexOf(id) == -1){
