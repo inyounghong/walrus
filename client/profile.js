@@ -21,6 +21,8 @@ Template.profile.helpers({
 
 	post: function() {
 		return Meteor.user().postsMade;
+	},
+	
 	firstName: function(){
 		return Meteor.user().services.google.given_name;
 	}
