@@ -152,7 +152,7 @@ ul.post-list li{
 
 .comment-form{
 	margin-top: 20px;
-	min-height: 140px;	
+	min-height: 100px;	
 	max-width: 700px;
 }
 
@@ -223,6 +223,25 @@ ul.post-list li{
 	
 }
 
+.indent{
+	
+	
+	margin-left: 50px;
+}
+
+.reply-text{
+	margin: 10px 0;
+}
+
+.comment-form *{
+	vertical-align: top;
+
+}
+
+.comment-form textarea{
+	border: 1px solid #ccc;
+	width: 300px;
+}
 
 
 /* Upvoting */
