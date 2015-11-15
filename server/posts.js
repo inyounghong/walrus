@@ -13,7 +13,6 @@ Meteor.methods({
   
     // Insert a post record
     var data = {
-      category: "academic",
       title: title,
       text: text,
       createdAt: new Date(),
@@ -28,10 +27,9 @@ Meteor.methods({
   },
   updatePost: function (id, text, cat, name, status) {
     var data = {
-      category: "academic",
+      category: cat,
       title: title,
       text: text,
-      category: cat,
       status: status,
       name: name
     };

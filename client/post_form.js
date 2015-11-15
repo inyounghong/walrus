@@ -86,6 +86,7 @@ Template.post_form.events({
 			else{
 				// Updating an existing post
 				Meteor.call("updatePost", Router.current().params._id, title, text, category, name, status, function(err, data){
+					console.log("ERRPR" + err);
 					Router.go("/post/" + Router.current().params._id);
 				});
 			}
