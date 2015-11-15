@@ -89,6 +89,13 @@ Template.list_post.helpers({
 
   hasRights: function(){
     return (Meteor.user().cornell || Meteor.user().admin);
+  },
+
+  showStatus: function(){
+    if (this.status == "open"){
+      return false;
+    }
+    return true;
   }
 });
 

@@ -42,7 +42,9 @@
       <span class="date">Date: {{prettyDate createdAt}}</span>
 
       <div class="float-right">
-        <span class="status">Status: {{status}}</span>
+        {{#if showStatus}}
+          <span class="status {{status}}">{{status}}</span>
+        {{/if}}
 
         {{#if isCornell}}
           <div class="btn-group edit-menu" >

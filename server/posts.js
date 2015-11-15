@@ -25,7 +25,7 @@ Meteor.methods({
     };
     return Posts.insert(data);
   },
-  updatePost: function (id, text, cat, name, status) {
+  updatePost: function (id, title, text, cat, name, status) {
     var data = {
       category: cat,
       title: title,

@@ -73,9 +73,6 @@ Template.post_form.events({
 	    	var status = "open";
 	    }
 
-
-
-	    console.log(isAnon);
 	    // Require text and category
 		if (isEmpty(text) || category == "Category" || isEmpty(title)){
 			console.log("error");
@@ -96,6 +93,7 @@ Template.post_form.events({
 			}
 			else{
 				// Updating an existing post
+				console.log("updateing post");
 				Meteor.call("updatePost", Router.current().params._id, title, text, category, name, status, function(err, data){
 					console.log("ERRPR" + err);
 					Router.go("/post/" + Router.current().params._id);

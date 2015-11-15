@@ -77,6 +77,22 @@ ul.post-list li{
 	padding: 10px 0;
 }
 
+.status{
+	padding: 5px 10px;
+	font-size: 12px;
+	border-radius: 3px;
+}
+.status.closed{
+	background: #ddd;
+}
+.status.resolved{
+	background: #A1D668;
+	color: #fff;
+}
+.status.progress{
+	background: yellow;
+}
+
 .float-right{
 	position: absolute;
 	top: 10px;
