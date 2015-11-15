@@ -196,6 +196,21 @@ body{
 				position: relative;
 				margin-top: -6%;
 			}
+			.profileLink{
+				position: absolute;
+				margin-left: 1170px;
+				padding-top: 70px;
+			}
+			.profileLink a{
+				color: white;
+				text-transform: uppercase;
+				font-size: large;
+				font-weight: normal;
+			}
+			.profileLink a:hover{
+				color: #B31B1B;
+				-webkit-transition: all .3s linear;
+			}
 
 			p.profile{
 				float:right;
@@ -348,6 +363,7 @@ body{
 			  	color: #B31B1B;
 			  	-webkit-transition: all .3s linear;
 			}
+			
 
 /* profile css page styling*/
 #userdisplay h1{
