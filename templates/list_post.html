@@ -19,20 +19,24 @@
       <div class="post-text">{{text}}</div>
 
       <span class="category">Category: {{category}}</span>
-      <span class="status">Status: {{status}}</span>
-      <span class="date">Date: {{createdAt}}</span>
+      
+      <span class="date">Date: {{prettyDate createdAt}}</span>
 
-      {{#if isCornell}}
-        <div class="btn-group edit-menu" >
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Edit <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" id="edit-dropdown">
-            <li><a href="post/edit/{{_id}}" class="edit">Edit</a></li>
-            <li><a class="delete">Delete</a></li>
-          </ul>
-        </div>
-      {{/if}}
+      <div class="float-right">
+        <span class="status">Status: {{status}}</span>
+
+        {{#if isCornell}}
+          <div class="btn-group edit-menu" >
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Edit <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="edit-dropdown">
+              <li><a href="post/edit/{{_id}}" class="edit">Edit</a></li>
+              <li><a class="delete">Delete</a></li>
+            </ul>
+          </div>
+        {{/if}}
+      </div>
     </div>
 
   </div>
