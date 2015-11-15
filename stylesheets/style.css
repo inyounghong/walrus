@@ -394,6 +394,7 @@ body{
 	color:  #B31B1B;
 
 }
+
 #userdisplay{
 	float:left;
 	font-size: 1.0em;
@@ -413,9 +414,7 @@ body{
 	color:  #B31B1B;
 }
 .upvoteassign{
-	float: right;
-	margin-top:-3%;
-	margin-right: 36%;
+	margin: auto;
 }
 #numcomments{
 	float:right;
@@ -434,10 +433,9 @@ body{
 	margin-left:-20%;
 }
 .commentassign{
-	float:right;
 	height: 30px;
 	width:30px;
-	margin-top: -3%;
+	margin: auto;
 
 }
 #topbar{
