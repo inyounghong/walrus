@@ -31,7 +31,9 @@
 				<p> {{email}}</p>
 				<br><br>
 				<h1> Number of resolved posts</h1>
-				<p>(insert number of resolved posts)</p>
+				{{#each post}}
+				<a href='post/{{_id}}'></a>
+				{{/each}}
 
 				<img class= "babylogo" src="../images/logo.png">
 			</div>
