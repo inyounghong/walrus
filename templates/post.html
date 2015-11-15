@@ -1,6 +1,7 @@
 <!-- Post page -->
 
 <template name="post">
+  <div id="voting">
     {{text}}
     <div class="container" id="Voting">
     	<button class="Upvote"></button>
@@ -18,5 +19,7 @@
    	{{#each comments}}
    		{{> comment}}
    	{{/each}}
+   </div>
 </template>
+
 
