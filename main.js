@@ -33,6 +33,7 @@ function initialize(collection) {
 		if (collection.find({name: categories[i]}).count() == 0){
 			collection.insert({
 				name : categories[i]
+				description: descriptions[i] 
 			});
 		}
 	}
