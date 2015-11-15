@@ -3,7 +3,10 @@ body{
 				font-family: "Raleway", sans-serif;
 				background-color: #FFF;
 			}
-
+			a.login{
+				color: #fff !important;
+    			text-decoration: none;
+			}
 			#loginpage{
 				background-image: url("../images/backgroundimg.jpg");
 				/*IMG SOURCE: https://en.wikipedia.org/wiki/Cornell_University#/
@@ -389,5 +392,7 @@ body{
 
 /*end profile.html styling*/
 			
+
+
 
 
