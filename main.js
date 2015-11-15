@@ -14,7 +14,7 @@ if (Meteor.isClient){
 }
 
 function initialize(collection) {
-	var categories = ["academics","athletics","maintenance", "dining", "residential", "financial", "outreach"];
+	var categories = ["academics", "appropriation","city","diversity","elections", "environment", "health", "financial", "technology", "maintenance", "dining", "residential", "financial", "outreach"];
 	for(i = 0; i < categories.length; i++ ){
 		if (collection.find({name: categories[i]}).count() == 0){
 			collection.insert({

@@ -59,7 +59,7 @@
 	border-width: 2px;
 	border-color: #B31B1B;
 	color: #B31B1B;
-	-webkit-transition: all .3s linear;
+	-webkit-transition: all .2s linear;
 }
 
 /* List posts */
@@ -169,14 +169,17 @@ ul.post-list li{
 .category-item{
 	margin: 20px 0;
 	position: relative;
+	padding: 10px 0;
 }
 
 .category-icon{
-	background: #B31B1B;
-	padding: 10px;
-	border-radius: 100%;
+	width: 60px;
 	display: inline-block;
 	float: left;
+}
+
+.category-icon img{
+	max-width: 100%;
 }
 
 .category-name{
@@ -184,7 +187,7 @@ ul.post-list li{
 }
 
 .category-main{
-	margin-left: 70px;
+	margin-left: 90px;
 }
 
 .category-posts-count{
