@@ -2,6 +2,10 @@
 	text-align: center;
 }
 
+.float-r{
+	float: right;
+}
+
 .container{
 	position: relative;
 }
@@ -64,6 +68,18 @@
 
 /* List posts */
 
+.post-list-title{
+	left: 20px;
+	position: relative;
+	top: 20px;
+	display: inline-block;
+	
+}	
+
+.post-list-title .title{
+	font-size: 18px;
+}
+
 ul.post-list li{
 	list-style-type: none;
 }
@@ -73,7 +89,7 @@ ul.post-list li{
 	position: relative;
 	background: #fff;
 	min-height: 80px;
-	padding: 10px 0;
+	padding: 10px 10px;
 }
 
 .status{
@@ -143,7 +159,6 @@ ul.post-list li{
 }
 
 .comment-body{
-	display: inline-block;
 	margin-left: 50px;
 	margin-top: 10px;
 }
@@ -168,7 +183,7 @@ ul.post-list li{
 	margin-left: 80px;
 }
 
-.post-text{
+.post-wrap .post-text{
 	font-size: 16px;
 	line-height: 1.7em;
 }
@@ -202,10 +217,13 @@ ul.post-list li{
 	padding: 10px 0;
 }
 
+.category-item .category-icon{
+	float:left;
+}
+
 .category-icon{
 	width: 60px;
 	display: inline-block;
-	float: left;
 }
 
 .big-category-icon{

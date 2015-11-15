@@ -18,29 +18,31 @@
   <div class="list_post">
 
     <div class="upvote-wrap">
-      <div class="upvote-comment Upvote"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
+      <div class="upvote-comment Upvote {{activeUpvote}} " ><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
       <div class="votes">{{votes}}</div>
-      <div class="downvote-comment Downvote"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
+      <div class="downvote-comment Downvote {{activeDownvote}}"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
     </div>
 
     <div class="category-icon post-icon" id="icon-{{category}}">
         <img src="../images/icon-{{category}}.png">
       </div>
+
+      <div class="post-list-title">
+        <a href="/post/{{_id}}" class="title">
+        {{title}}
+        </a>
+        <br>by 
+        <span class="name">{{name}}</span>
+        <span class="category">/ {{category}}</span>
+        <span class="date">/ {{prettyDate createdAt}}</span>
+      </div>
     
     <div class="comment-body">
 
-      <a href="/post/{{_id}}" class="title">
-        {{title}}
-      </a> by 
-      <span class="name">{{name}}</span>
+  
+      <div class="post-text">{{previewText}}</div>
 
-
-      <div class="post-text">{{text}}</div>
-
-      <span class="category">Category: {{category}}</span>
-      
-      <span class="date">Date: {{prettyDate createdAt}}</span>
-
+  
       <div class="float-right">
         {{#if showStatus}}
           <span class="status {{status}}">{{status}}</span>

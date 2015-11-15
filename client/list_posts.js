@@ -51,6 +51,7 @@ Template.index.helpers({
 
 
 
+
 });
 
 Template.index.events({
@@ -96,6 +97,24 @@ Template.list_post.helpers({
       return false;
     }
     return true;
+  },
+
+  previewText: function(){
+    if (this.text.length >= 300){
+      return this.text.substring(0, 300) + "..." ;
+    }
+    return this.text;
+  },
+
+  activeUpvote: function(){
+    if (Meteor.user().upvoted.indexOf(this._id) > -1){
+      return "active-vote";
+    }
+  },
+  activeDownvote: function(){
+    if (Meteor.user().downvoted.indexOf(this._id) > -1){
+      return "active-vote";
+    }
   }
 });
 

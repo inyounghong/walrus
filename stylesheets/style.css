@@ -17,6 +17,7 @@ a.login{
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: 1460px 978px;
+	height: 800px;
 }
 
 /*START HOMEPAGE STYLING*/
@@ -247,10 +248,15 @@ img.academicimage{
 	font-size: 20px!important;
 	position: relative;
 	left: -5px;
+	color: #888;
+}
+
+.active-vote .glyphicon{
+	color: #B31B1B!important;
 }
 
 .glyphicon-chevron-up:hover, .glyphicon-chevron-down:hover {
-	color: #B31B1B!important;
+	color: #000!important;
 	cursor: pointer;
 
 }
@@ -328,25 +334,7 @@ input#post-text.form-control{
   	text-decoration: none !important;
 
 }
-#logout{
-	margin-top: 20px;
-	border-style: none;
-  	border-radius: 0px !important;
-  	font-family: 'Raleway' !important;
-  	color: #ffffff !important;
-  	font-size: 14px !important;
-  	background-color: transparent;
-  	padding: 10px 20px 10px 20px !important;
-  	text-decoration: none !important;
-}
 
-
-#logout:hover{
-	background: #B31B1B !important;
-  	text-decoration: none !important;
-  	color: #B31B1B;
-  	-webkit-transition: all .3s linear;
-}
 
 label{
 	margin-bottom: 8px !important;
@@ -364,9 +352,6 @@ label{
  	padding-bottom:10px;
  }
 
- .date{
- 	margin-left: 30px;
- }
 
 
 /* profile css page styling*/
@@ -440,7 +425,7 @@ label{
 .footer{
 	text-align: center;
 	font-family: 'Raleway';
-	margin-top: 140px;
+	margin-top: 20px;
 }
 h1#welcome{
 	font-size: 24px;
