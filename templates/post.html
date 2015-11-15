@@ -1,22 +1,36 @@
 <!-- Post page -->
 
 <template name="post">
-    {{text}}
-    <div class="container" id="Voting">
-    	<button class="Upvote"></button>
-    	{{votes}}
-    	<button class="Downvote"></button>
-   	</div>
 
-   	<!-- Form for adding a new comment -->
-   	<form class="new-comment">
-      <input type="text" name="text" id="comment-text" placeholder="Add comment" />
-      <label for="anonymous">Comment Anonymously</label><input type="checkbox" id="anonymous" name="anonymous"/>
-      <button id="add-comment">Comment</button>
-    </form>
+  <div id="headerimageacademics">
+    <h1 class="headertitle">{{category}}</h1>
+    <i class="fa fa-book" style="font-size:36px;color:white"></i>
+  </div>
+  {{> menu}}
 
-   	{{#each comments}}
-   		{{> comment}}
-   	{{/each}}
+  <div class="container">
+
+    <h1>{{title}}</h1>
+      {{text}}
+      <div class="container" id="Voting">
+      	<button class="Upvote"></button>
+      	{{votes}}
+      	<button class="Downvote"></button>
+     	</div>
+
+     	<!-- Form for adding a new comment -->
+     	<div class="comment-form">
+        <input type="text" name="text" id="comment-text" placeholder="Add comment" />
+        <label for="anonymous">
+          <input type="checkbox" id="anonymous" name="anonymous"/>
+          Comment Anonymously
+        </label>
+        <button id="add-comment">Comment</button>
+      </div>
+
+     	{{#each comments}}
+     		{{> comment}}
+     	{{/each}}
+  </div>
 </template>
 
