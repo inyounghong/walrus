@@ -194,9 +194,11 @@ h2.petitiontitle{
 }
 #headerimagemaintenance{
 	background: url('../images/maintenance.jpg');
+
 }
 #headerimageall, #headerimageindex{
 	background: url('../images/artsquad.jpg');
+
 }
 .profileLink{
 	position: absolute;
