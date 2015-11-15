@@ -53,7 +53,10 @@ Template.tab.helpers( {
 
 	newestIsSelected: function() {
 		return Session.get("filter") == "Newest";
-	}
+	},
+	categories: function() {
+	    return Categories.find();
+	  },
 });
 
 
@@ -73,5 +76,9 @@ Template.tab.events( {
 	    }
 	    console.log(str);
 	    Session.set("status", str);
-	  }
+	  },
+
+	 "change #category": function(e){
+	 	Router.go("/" + document.getElementById("category").value);
+	 }
 });
