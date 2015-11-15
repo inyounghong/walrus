@@ -2,7 +2,7 @@ Meteor.subscribe("comments");
 Meteor.subscribe("userData");
 Template.post.helpers({
   comments: function () {
-    return Comments.find({}, {sort: {createdAt: -1}});
+    return Comments.find({postId: this._id}, {sort: {createdAt: -1}});
   },
 
 });
@@ -38,7 +38,7 @@ Template.post.events({
       var name = Meteor.user().services.google.name;
     }
 
-    Meteor.call("addComment", text, name);
+    Meteor.call("addComment", text, name, this._id);
     document.getElementById("comment-text").value = "";
   },
 
