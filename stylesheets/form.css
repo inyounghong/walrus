@@ -1,0 +1,15 @@
+#post-form{
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.form-control{
+	margin: 5px 0;
+}
+
+.submit{
+	background: #B31B1B;
+	color: #fff;
+	border: none;
+	text-align: center;
+}
