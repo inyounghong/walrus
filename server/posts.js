@@ -39,12 +39,12 @@ Meteor.methods({
     Posts.remove(postId);
   },
 
-  upvotePost: function(postId) {
-    Posts.update(postId, {$inc: {votes: 1}});
+  upvotePost: function(postId,count) {
+    Posts.update(postId, {$inc: {votes: count}});
   },
 
-  downvotePost: function(postId) {
-    Posts.update(postId, {$inc: {votes: -1}});
+  downvotePost: function(postId,count) {
+    Posts.update(postId, {$inc: {votes: -1*count}});
   }
   // setChecked: function (postId, setChecked) {
   //   Posts.update(postId, { $set: { checked: setChecked} });

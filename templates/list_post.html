@@ -1,15 +1,18 @@
 <!-- One list post on the index page -->
 
 <template name="list_post">
+  <div class="list_post">
     <button class="delete">&times;</button>
  
     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
     
-    <a href="/post/{{_id}}" class="list_post">
+    <a href="/post/{{_id}}" class="title">
       <span class="text"><strong>{{name}}</strong> - {{text}}</span>
-      <span class="category">Category: {{category}}</span>
-      <span class="status">Status: {{status}}</span>
+      
     </a>
+
+    <span class="category">Category: {{category}}</span>
+      <span class="status">Status: {{status}}</span>
 
     <div class="voting">
       <button class="Upvote"></button>
@@ -20,5 +23,6 @@
     <div class="edit-menu">
       <a href="post/edit/{{_id}}" class="edit">Edit</a>
     </div>
+  </div>
   
 </template>

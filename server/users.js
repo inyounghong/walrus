@@ -14,5 +14,47 @@ ServiceConfiguration.configurations.insert({
 
 Accounts.onCreateUser(function (options, user) {
   console.log('Creating user: ' + user.username);
-  return user;
+  	if (Meteor.isServer){
+		user.upvoted = [];
+		user.downvoted = [];
+		user.admin = false;
+	}
+	if (options.profile){
+		user.profile = options.profile;
+	}
+	return user;
+});
+
+Meteor.methods({
+	upvotePostToUser: function(user,id) {
+		count = 0;
+		if(Meteor.users.findOne({_id: user._id}).upvoted.indexOf(id) == -1){
+			count = 1
+			Meteor.users.update({_id: user._id}, {$addToSet: {upvoted: id}});
+			if (Meteor.users.findOne({_id: user._id}).downvoted.indexOf(id) != -1){
+				Meteor.users.update({_id: user._id}, {$addToSet: {upvoted: id}});
+				Meteor.users.update({_id: user._id}, {$pull: {downvoted: id}});
+				//upvotePost(id);
+				count = 2
+			};
+			return [id,count];
+		};
+		return null;
+	},
+
+	downvotePostToUser: function(user,id) {
+		count = 0;
+		if(Meteor.users.findOne({_id: user._id}).downvoted.indexOf(id) == -1){
+			Meteor.users.update({_id: user._id}, {$addToSet: {downvoted: id}});
+			count = 1;
+			if (Meteor.users.findOne({_id: user._id}).upvoted.indexOf(id) != -1){
+				Meteor.users.update({_id: user._id}, {$addToSet: {downvoted: id}});
+				Meteor.users.update({_id: user._id}, {$pull: {upvoted: id}});
+				count = 2;
+				//downvotePost(id);
+			};
+			return [id,count];
+		};
+		return null;
+	}
 });
