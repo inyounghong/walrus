@@ -35,11 +35,6 @@ Template.list_post.helpers({
     return this.owner === Meteor.userId();
   },
 
-  // Returns name of poster
-  name: function (){
-    return this.userId;
-  },
-
   isCornell: function(){
     console.log(Meteor.user());
     return Meteor.user().cornell;
