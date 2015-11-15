@@ -20,7 +20,7 @@ Accounts.onCreateUser(function (options, user) {
 		var email = user.services.google.email;
 		var domain = email.split("@");
 		if (domain == "cornell.edu"){
-			user.cornell = 	
+			user.cornell = 	false;
 		}
 		
 	}
