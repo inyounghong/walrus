@@ -118,10 +118,12 @@ body{
 			ul.menu li{
 				display: inline;
 				color: #ffffff;
+				text-shadow: 2px 2px 4px #000;
 			}
 			ul.menu li a{
 				color: #ffffff;
 				text-decoration: none;
+				text-shadow: 20px;
 				padding-top: 0px;
 				padding-bottom: 0px;
 				padding-left: 70px;
@@ -364,6 +366,26 @@ body{
 			  	-webkit-transition: all .3s linear;
 			}
 			
+			label{
+				margin-bottom: 8px !important;
+				margin-top:4px !important;
+			}
+			 b{
+			 	font-size: large;
+			 }
+			 #status{
+			 	padding-top:8px;
+			 	padding-bottom:8px;
+			 }
+			 select#filter{
+			 	padding-top:10px;
+			 	padding-bottom:10px;
+			 }
+
+			 .date{
+			 	margin-left: 30px;
+			 }
+
 
 /* profile css page styling*/
 #userdisplay h1{
@@ -422,7 +444,8 @@ body{
 	margin-right:2%;
 }
 .babylogo{
-	height:100px;
+	margin-top: 30px;
+	height:60px;
 	width: 200px;
 }
 
