@@ -409,11 +409,7 @@ body{
 	height:100px;
 	width: 200px;
 }
-#rightcolumn{
-	float:right;
-	margin-right:2%;
-	margin-top: 10%
-}
+
 #rightcolumn h1{
 	font-size:1.0em;
 	color: #B31B1B;
