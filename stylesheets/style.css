@@ -382,6 +382,11 @@ body{
 			 	padding-bottom:10px;
 			 }
 
+			 .date{
+			 	margin-left: 30px;
+			 }
+
+
 /* profile css page styling*/
 #userdisplay h1{
 	font-family: 'Raleway', sans-serif;
