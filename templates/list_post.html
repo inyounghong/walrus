@@ -2,31 +2,35 @@
 
 <template name="list_post">
   <div class="list_post">
-    
-    <a href="/post/{{_id}}" class="title">
-      {{name}}
-    </a>
 
-    <div class="post-text">{{text}}</div>
-
-    <span class="category">Category: {{category}}</span>
-      <span class="status">Status: {{status}}</span>
-
-    
-    <div class="voting">
-      <button class="Upvote"></button>
-      {{votes}}
-      <button class="Downvote"></button>
+    <div class="upvote-wrap">
+      <div class="upvote-comment Upvote"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
+      <div class="votes">{{votes}}</div>
+      <div class="downvote-comment Downvote"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
     </div>
+    
+    <div class="comment-body">
+      <a href="/post/{{_id}}" class="title">
+        {{title}}
+      </a>
 
-    <div class="btn-group edit-menu" >
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Edit <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" id="edit-dropdown">
-        <li><a href="post/edit/{{_id}}" class="edit">Edit</a></li>
-        <li><a class="delete">Delete</a></li>
-      </ul>
+
+      <div class="post-text">{{text}}</div>
+
+      <span class="category">Category: {{category}}</span>
+      <span class="status">Status: {{status}}</span>
+      <span class="date">Date: {{createdAt}}</span>
+
+
+      <div class="btn-group edit-menu" >
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Edit <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="edit-dropdown">
+          <li><a href="post/edit/{{_id}}" class="edit">Edit</a></li>
+          <li><a class="delete">Delete</a></li>
+        </ul>
+      </div>
     </div>
 
   </div>

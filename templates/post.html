@@ -1,25 +1,44 @@
 <!-- Post page -->
 
 <template name="post">
-  <div id="voting">
-    {{text}}
-    <div class="container" id="Voting">
-    	<button class="Upvote"></button>
-    	{{votes}}
-    	<button class="Downvote"></button>
-   	</div>
 
-   	<!-- Form for adding a new comment -->
-   	<form class="new-comment">
-      <input type="text" name="text" id="comment-text" placeholder="Add comment" />
-      <label for="anonymous">Comment Anonymously</label><input type="checkbox" id="anonymous" name="anonymous"/>
-      <button id="add-comment">Comment</button>
-    </form>
+  <div id="headerimageacademics">
+    <h1 class="headertitle">{{category}}</h1>
+    <i class="fa fa-book" style="font-size:36px;color:white"></i>
+  </div>
+  {{> menu}}
 
-   	{{#each comments}}
-   		{{> comment}}
-   	{{/each}}
-   </div>
+  <div class="container">
+
+    
+      
+
+      <div class="upvote-wrap">
+        <div class="upvote-comment Upvote"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
+        <div class="votes">{{votes}}</div>
+        <div class="downvote-comment Downvote"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
+      </div>
+
+      <div class="comment-body">
+        <h1>{{title}}</h1>
+        {{text}}
+      </div>
+
+
+     	<!-- Form for adding a new comment -->
+     	<div class="comment-form">
+        <textarea type="text" name="text" id="comment-text" placeholder="Add comment"></textarea>
+        <label for="anonymous">
+          <input type="checkbox" id="anonymous" name="anonymous"/>
+          Comment Anonymously
+        </label>
+        <button id="add-comment" class="button">Comment</button>
+      </div>
+
+     	{{#each comments}}
+     		{{> comment}}
+     	{{/each}}
+  </div>
 </template>
 
 
