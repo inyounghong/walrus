@@ -5,7 +5,7 @@ Meteor.publish("posts", function () {
 
 Meteor.methods({
 
-  addPost: function (text, cat, anon, status) {
+  addPost: function (title, text, cat, anon, status) {
     // Make sure the user is logged in before inserting a task
     // if (! Meteor.userId()) {
     //   throw new Meteor.Error("not-authorized");
@@ -14,6 +14,7 @@ Meteor.methods({
     // Insert a post record
     var data = {
       category: "academic",
+      title: title,
       text: text,
       createdAt: new Date(),
       userId: Meteor.userId(),
@@ -28,6 +29,7 @@ Meteor.methods({
   updatePost: function (id, text, cat, anon, status) {
     var data = {
       category: "academic",
+      title: title,
       text: text,
       category: cat,
       status: status,
