@@ -17,9 +17,14 @@ Accounts.onCreateUser(function (options, user) {
 		user.upvoted = [];
 		user.downvoted = [];
 		user.admin = false;
+		console.log(user.services.google.email);
 		var email = user.services.google.email;
 		var domain = email.split("@");
-		if (domain == "cornell.edu"){
+		console.log(domain[1]);
+		if (domain[1] == "cornell.edu"){
+			user.cornell = 	true;
+		} 
+		else {
 			user.cornell = 	false;
 		}
 		
