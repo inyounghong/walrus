@@ -37,11 +37,21 @@
 
 	        <!-- sidebar column -->
 	        <div class="col-sm-4">
+	        	<b>Sort By</b>
 	        	<select id = "filter" class="form-control"> 
 					<option value = "Top" selected = {{topIsSelected}}> Top</option>
 					<option value = "Oldest" selected = {{oldestIsSelected}}> Oldest</option>
 					<option value = "Newest" selected = {{newestIsSelected}}> Newest</option>
 				</select>
+
+				<b>Status</b>
+				<select class="form-control" id="category" required {{disabled}}>
+					<option value="all" selected>All Categories</option>
+					{{#each categories}}
+						<option value="{{name}}" selected="{{isSelected}}">{{name}}</option>
+					{{/each}}
+				</select>
+
 
 				<b>Status</b>
 				<div class="status-checks">
