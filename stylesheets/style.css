@@ -203,7 +203,7 @@ h2.petitiontitle{
 #headerimagetechnology{
 	background: url('../images/technologywall.png')
 }
-#headerimagewealthness{
+#headerimagehealth{
 	background: url('../images/wellnesswall.jpg')
 }
 #headerimageoutreach{
@@ -229,6 +229,9 @@ h2.petitiontitle{
 }
 #headerimageenvironment{
 	background: url('../images/financial.jpg')
+}
+#headerimageresidential{
+	background: url('../images/residential.jpg')
 }
 .profileLink{
 	position: absolute;
