@@ -2,6 +2,10 @@
 	text-align: center;
 }
 
+.container{
+	position: relative;
+}
+
 .button{
 	background: #B31B1B;
 	color: #fff;
@@ -43,9 +47,10 @@ ul.post-list li{
 
 .list_post{
 	border: 1px solid #ddd;
-	padding: 10px 30px;
 	position: relative;
 	background: #fff;
+	min-height: 80px;
+	padding: 10px 0;
 }
 
 .edit-menu{
@@ -95,12 +100,17 @@ ul.post-list li{
 	margin-left: 50px;
 }
 
-.upvote-wrap{
-	position: absolute;
-	left: 0;
-	top: 0;
-}
 
 .comment-text{
 	
+}
+
+/* Upvoting */
+
+
+.upvote-wrap{
+	position: absolute;
+	left: 0;
+	top: 10px;
+	padding: 0 10px;
 }

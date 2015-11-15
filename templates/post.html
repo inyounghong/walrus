@@ -10,13 +10,20 @@
 
   <div class="container">
 
-    <h1>{{title}}</h1>
-      {{text}}
-      <div class="container" id="Voting">
-      	<button class="Upvote"></button>
-      	{{votes}}
-      	<button class="Downvote"></button>
-     	</div>
+    
+      
+
+      <div class="upvote-wrap">
+        <div class="upvote-comment Upvote"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
+        <div class="votes">{{votes}}</div>
+        <div class="downvote-comment Downvote"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
+      </div>
+
+      <div class="comment-body">
+        <h1>{{title}}</h1>
+        {{text}}
+      </div>
+
 
      	<!-- Form for adding a new comment -->
      	<div class="comment-form">
