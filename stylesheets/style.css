@@ -123,11 +123,14 @@ body{
 				padding-right: 70px;
 
 			}
+			#voting{
+				margin-left: 30%
+			}
 
 			ul.menu li a:hover{
 				background-color: #fff;
-				padding-top: 16px;
-				padding-bottom: 16px;
+				padding-top: 18px;
+				padding-bottom: 18px;
 				padding-left: 70px;
 				padding-right: 70px;
 				color: #B31B1B;
