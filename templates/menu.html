@@ -7,8 +7,10 @@
 		<li><a href="/maintenance">Maintenance</a></li> -->
 		{{#if isLogged}}
 			<li id="profile-link"><a href="/profile">My Profile</a></li>
+			<li id="hey-greeting">Hey, {{username}}!</li>
+			
 		{{else }}
-			<li id="profile-link"><a href="/">Login</a></li>
+			<li id="profile-link"><a href="/">Login </a></li>
 		{{/if}}
 	</ul>
 </template>
