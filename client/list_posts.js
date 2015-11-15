@@ -4,32 +4,41 @@ Meteor.subscribe("userData");
 
 
 Template.index.helpers({
-  posts: function () {
-
+  posts: function() {
     var status = Session.get("status");
-    console.log(status);
-    if (status === undefined || status == ""){
-      return Posts.find({}, {sort: {createdAt: -1}});
-    }
-    else{
-      console.log(status);
-      
-      var status_array = status.split("/");
-      console.log("length:" + status_array.length);
-      var all_status = ["open", "resolved", "closed", "progress"];
-      var data = [];
+    var filter = Session.get("filter");
 
-      if (status_array.length == 0){
-        console.log("nothing")
-        return Posts.find({}, {sort: {createdAt: -1}});
-      }
-      for (i = 0; i < status_array.length -1; i++){
-        data.push({status: status_array[i]});
-      }
-      console.log(data);
-      return Posts.find({ $or: data}, {sort: {createdAt: -1}});
+    if (filter == null){
+      Session.set("filter", "Top");
+      filter = "Top";
     }
-    
+
+    if (filter == "Top"){
+      var sort = {sort: {votes: -1}};
+    }
+    else if (filter == "Oldest") {
+      var sort = {sort: {createdAt: 1}};
+    }
+    else if (filter == "Newest" ) {
+      var sort = {sort: {createdAt: -1}};
+    }
+
+      if (status === undefined || status == ""){
+        return Posts.find({}, sort);
+      }
+      else{
+        var status_array = status.split("/");
+        var all_status = ["open", "resolved", "closed", "progress"];
+        var data = [];
+
+        if (status_array.length == 0){
+          return Posts.find({}, {sort: {createdAt: -1}});
+        }
+        for (i = 0; i < status_array.length -1; i++){
+          data.push({status: status_array[i]});
+        }
+        return Posts.find({ $or: data}, sort);
+      }
   },
 
   votes: function () {

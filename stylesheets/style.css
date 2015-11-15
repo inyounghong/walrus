@@ -310,11 +310,88 @@ body{
 				height: 100px !important;
 			}
 
-			.footer{
-				text-align: center;
-				font-family: 'Raleway';
-				margin-top: 140px;
-			}
+
+/* profile css page styling*/
+#userdisplay h1{
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.0em;
+	color:  #B31B1B;
+
+}
+#userdisplay{
+	float:left;
+	font-size: 1.0em;
+	margin-left: 2%;
+	border-color:  #B31B1B;
+}
+#numupvotes {
+	float:right;
+	display: inline;
+	margin-top: 0%;
+	margin-right: 41%;	
+
+}
+#numupvotes h1{
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.0em;
+	color:  #B31B1B;
+}
+.upvoteassign{
+	float: right;
+	margin-top:-3%;
+	margin-right: 36%;
+}
+#numcomments{
+	float:right;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.0em;
+	color:  #B31B1B;
+	margin-top:0%;
+
+}
+#numcomments h1{
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.0em;
+	color:  #B31B1B;
+	margin-top: -15%;
+	margin-right: 0%;
+	margin-left:-20%;
+}
+.commentassign{
+	float:right;
+	height: 30px;
+	width:30px;
+	margin-top: -3%;
+
+}
+#topbar{
+	margin-right:2%;
+}
+.babylogo{
+	height:100px;
+	width: 200px;
+}
+#rightcolumn{
+	float:right;
+	margin-right:2%;
+	margin-top: 10%
+}
+#rightcolumn h1{
+	font-size:1.0em;
+	color: #B31B1B;
+}
+#rightcolumn p{
+	font-size: .9em;
+	color: #696969;
+}
+.footer{
+	text-align: center;
+	font-family: 'Raleway';
+	margin-top: 140px;
+}
+
+/*end profile.html styling*/
+			
 
 
 

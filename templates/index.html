@@ -29,15 +29,24 @@
             {{/each}}
           </ul>
         </div>
-        <div class="col-sm-4">
-          <b>Status</b>
-          <div class="status-checks">
-            <label><input type="checkbox" class="status-checkbox" value="open"> Open</label>
-            <label><input type="checkbox" class="status-checkbox" value="progress"> Progress</label>
-            <label><input type="checkbox" class="status-checkbox" value="resolved"> Resolved</label>
-            <label><input type="checkbox" class="status-checkbox" value="closed"> Closed</label>
+        <!-- sidebar column -->
+          <div class="col-sm-4">
+            <select id = "filter" class="form-control"> 
+          <option value = "Top" selected = {{topIsSelected}}> Top</option>
+          <option value = "Oldest" selected = {{oldestIsSelected}}> Oldest</option>
+          <option value = "Newest" selected = {{newestIsSelected}}> Newest</option>
+        </select>
+
+        <b>Status</b>
+              <div class="status-checks">
+                <label><input type="checkbox" class="status-checkbox" value="open"> Open</label>
+                <label><input type="checkbox" class="status-checkbox" value="progress"> Progress</label>
+                <label><input type="checkbox" class="status-checkbox" value="resolved"> Resolved</label>
+                <label><input type="checkbox" class="status-checkbox" value="closed"> Closed</label>
+              </div>
+
+
           </div>
-        </div>
       </div>
   </div>
 
