@@ -13,7 +13,6 @@ ServiceConfiguration.configurations.insert({
 });
 
 Accounts.onCreateUser(function (options, user) {
-  console.log('Creating user: ' + user.username);
   	if (Meteor.isServer){
 		user.upvoted = [];
 		user.downvoted = [];
