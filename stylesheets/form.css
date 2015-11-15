@@ -125,7 +125,7 @@ ul.post-list li{
 
 .comment-body{
 	display: inline-block;
-	margin-left: 50px;
+	margin-left: 20px;
 	margin-top: 10px;
 }
 
@@ -146,4 +146,44 @@ ul.post-list li{
 
 .status-checks label{
 	display: block;
+}
+
+
+/* Category */
+
+.category-item{
+	margin: 20px 0;
+	position: relative;
+}
+
+.category-icon{
+	background: #B31B1B;
+	padding: 10px;
+	border-radius: 100%;
+	display: inline-block;
+	float: left;
+}
+
+.category-name{
+	text-transform: capitalize;
+}
+
+.category-main{
+	margin-left: 70px;
+}
+
+.category-posts-count{
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: center;
+}
+
+.post-number{
+	font-size: 18px;
+}
+
+.post-icon{
+	margin-left: 50px;
+	margin-top: 10px;
 }

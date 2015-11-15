@@ -1,0 +1,32 @@
+<template name="home">
+	<div id="headerimageindex">
+    	<h1 class="headertitle">Instigate Change</h1>
+    	<i class="fa fa-book" style="font-size:36px;color:white"></i>
+  	</div>
+  	{{> menu}}
+
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-sm-8">
+		  		{{#each categories}}
+		  			<div class="category-item">
+		  				<div class="category-icon" id="icon-{{name}}">
+		  					<img src="../images/icon-{{name}}.png">
+		  				</div>
+		  				<div class="category-main">
+		  					<a href="/{{name}}" class="category-name">{{name}}</a>
+		  					<div class="category-description">Description</div>
+
+		  					<div class="category-posts-count">
+		  						<div class="post-number">{{postCount}}</div>
+		  						Posts
+		  					</div>
+		  				</div>
+		  			</div>
+		  		{{/each}}
+		  	</div>
+		  	<div class="col-sm-4">
+		  	</div>
+		  </div>
+  	</div>
+</template>
