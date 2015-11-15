@@ -194,9 +194,43 @@ h2.petitiontitle{
 }
 #headerimagemaintenance{
 	background: url('../images/maintenance.jpg');
+
 }
 #headerimageall, #headerimageindex{
 	background: url('../images/artsquad.jpg');
+}
+#headerimagetechnology{
+	background: url('../images/technologywall.png')
+}
+#headerimagehealth{
+	background: url('../images/wellnesswall.jpg')
+}
+#headerimageoutreach{
+	background: url('../images/commwall.png')
+}
+#headerimagediversity{
+	background: url('../images/diversity.png')
+}
+#headerimagedining{
+	background: url('../images/dining.jpg')
+}
+#headerimagecity{
+	background: url('../images/city.jpg')
+}
+#headerimageappropriation{
+	background: url('../images/appropriation.jpg')
+}
+#headerimageelections{
+	background: url('../images/elections.jpg')
+}
+#headerimagefinancial{
+	background: url('../images/financial.jpg')
+}
+#headerimageenvironment{
+	background: url('../images/environment.jpg')
+}
+#headerimageresidential{
+	background: url('../images/residential.jpg')
 }
 .profileLink{
 	position: absolute;
