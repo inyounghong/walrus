@@ -27,6 +27,12 @@
 		<div class="row">
 			<!-- Post column -->
 	        <div class="col-sm-8">
+	        	<ul id = "filter" class="nav nav-tabs"> 
+					<li class="{{topIsSelected}}"><a id="Top" href="" >Top</a></li>
+					<li class="{{oldestIsSelected}}"><a id="Oldest" href="" > Oldest</a></li>
+					<li class="{{newestIsSelected}}"><a id="Newest" href="" > Newest</a></li>
+				</ul>
+				<br>
 
 	          <ul id="Posts" class="post-list">
 	            {{#each posts}}
@@ -38,11 +44,7 @@
 	        <!-- sidebar column -->
 	        <div class="col-sm-4">
 	        	<b>Sort By</b>
-	        	<select id = "filter" class="form-control"> 
-					<option value = "Top" selected = {{topIsSelected}}> Top</option>
-					<option value = "Oldest" selected = {{oldestIsSelected}}> Oldest</option>
-					<option value = "Newest" selected = {{newestIsSelected}}> Newest</option>
-				</select>
+	        	
 
 				<b>Status</b>
 				<select class="form-control" id="category" required {{disabled}}>
