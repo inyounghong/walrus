@@ -7,6 +7,20 @@ Template.post.helpers({
 
 });
 
+Template.comment.helpers({
+  activeUpvote: function(){
+    console.log(this._id);
+    if (Meteor.user().upvoted.indexOf(this._id) > -1){
+      return "active-vote";
+    }
+  },
+  activeDownvote: function(){
+    if (Meteor.user().downvoted.indexOf(this._id) > -1){
+      return "active-vote";
+    }
+  }
+})
+
 Template.post.events({
 
   "click .Upvote" : function (event) {
