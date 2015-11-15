@@ -24,7 +24,6 @@ Meteor.methods({
       name: name
     };
     var dat = Posts.insert(data);
-    Meteor.users.update({_id: Meteor.userId}, {$addToSet: {postsMade: {"id": dat, "Title" : title}}});
     return dat;
   },
   updatePost: function (id, title, text, cat, name, status) {
