@@ -243,28 +243,16 @@ img.academicimage{
 }
 
 /*post formatting*/
-span.glyphicon.glyphicon-chevron-up {
-    position: relative;
-    top: 2px !important;
-    right: 2px !important;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
+.glyphicon-chevron-up , .glyphicon-chevron-down  {
+	font-size: 20px!important;
+	position: relative;
+	left: -5px;
 }
 
-span.glyphicon.glyphicon-chevron-down {
-    position: relative;
-    top: 1px;
-    right: 3px !important;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
+.glyphicon-chevron-up:hover, .glyphicon-chevron-down:hover {
+	color: #B31B1B!important;
+	cursor: pointer;
+
 }
 
 .btn {

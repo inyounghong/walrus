@@ -2,37 +2,57 @@
 
 <template name="post">
   
-  <div id="headerimage{{category}}">
+  <div id="headerimage{{category}}" class="header-image">
     <h1 class="headertitle">{{category}}</h1>
-    <i class="fa fa-book" style="font-size:36px;color:white"></i>
   </div>
   {{> menu}}
 
   <div class="container">
-
     
-      
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="post-wrap">
+            <div class="upvote-wrap">
+              <div class="Upvote"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
+              <div class="votes">{{votes}}</div>
+              <div class="Downvote"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
+            </div>
 
-      <div class="upvote-wrap">
-        <div class="Upvote"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
-        <div class="votes">{{votes}}</div>
-        <div class="Downvote"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
-      </div>
+            <div class="post-body">
+              <h1>{{title}}</h1>
+              <div class="post-text">{{text}}</div>
+            </div>
+          </div>
+        </div>
 
-      <div class="comment-body">
-        <h1>{{title}}</h1>
-        <div class="post-text">{{text}}</div>
-      </div>
+        <div class="col-sm-3 sidebar">
+          <div class="big-category-icon post-icon" id="icon-{{category}}">
+            <img src="../images/icon-{{category}}.png">
+
+          </div>
+          <div class="cat">{{category}}</div>
+
+          <br><br>
+          <h3>Submitted By</h3>
+          {{name}}
+
+          <br>
+          <h3>Date Submitted</h3>
+          {{prettyDate createdAt}}
+        </div>
+
+    </div>
 
 
      	<!-- Form for adding a new comment -->
      	<div class="comment-form">
         <textarea type="text" name="text" id="comment-text" placeholder="Add comment"></textarea>
-        <label for="anonymous">
+        <button id="add-comment" class="button">Comment</button>
+        <label>
           <input type="checkbox" id="anonymous" name="anonymous"/>
           Comment Anonymously
         </label>
-        <button id="add-comment" class="button">Comment</button>
+        
       </div>
 
      	{{#each comments}}

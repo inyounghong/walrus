@@ -54,6 +54,18 @@ Template.post_form.helpers({
 		if (Router.current().params._id === undefined){
 			return (Posts.findOne({_id: Router.current().params._id}).status == "closed");
 		} return false;
+	},
+	formTitle: function(){
+		if (Router.current().params._id === undefined){
+			return "Add a Post";
+		} 
+		return "Edit Post";
+	},
+	submitText: function(){
+		if (Router.current().params._id === undefined){
+			return "Submit Post";
+		} 
+		return "Update Post";
 	}
 });
 
