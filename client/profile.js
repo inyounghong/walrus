@@ -1,4 +1,7 @@
 Template.profile.helpers({
+	posts: function(){
+		return Posts.find({userId: Meteor.userId()});
+	},
 
 	admins: function(){
 		return Meteor.users.find({admin: true});
