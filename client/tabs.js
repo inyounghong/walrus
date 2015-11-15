@@ -2,15 +2,14 @@ Meteor.subscribe("posts");
 
 Template.tab.helpers( {
 	posts: function() {
-		console.log(this.subject);
 		var status = Session.get("status");
+		console.log("STATUS: " + status);
 		var filter = Session.get("filter");
 		var category = {category: this.subject};
 
 		if (this.subject == "all"){
 			category = {};
 		}
-
 
 		if (filter == null){
 			Session.set("filter", "Top");
@@ -42,10 +41,10 @@ Template.tab.helpers( {
 	      	if (this.subject == "all"){
 				data.push({status: status_array[i]});
 			}else {
-				data.push({status: status_array[i], category: subject});
-	      }
+					data.push({status: status_array[i], category: this.subject});
+		     }
 			}
-	        
+	        console.log("data");
 	      return Posts.find({ $or: data}, sort);
 	    }
 	},
