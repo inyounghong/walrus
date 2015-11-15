@@ -43,8 +43,10 @@ Meteor.methods({
 	upvotePostToUser: function(user,id) {
 		count = 0;
 		if(Meteor.users.findOne({_id: user._id}).upvoted.indexOf(id) == -1){
-			count = 1
+			count = 1;
+			console.log(Meteor.user().upvoted);
 			Meteor.users.update({_id: user._id}, {$addToSet: {upvoted: id}});
+			console.log(Meteor.user().upvoted);
 			if (Meteor.users.findOne({_id: user._id}).downvoted.indexOf(id) != -1){
 				Meteor.users.update({_id: user._id}, {$addToSet: {upvoted: id}});
 				Meteor.users.update({_id: user._id}, {$pull: {downvoted: id}});
