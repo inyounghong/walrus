@@ -1,13 +1,30 @@
 <template name="comment">
 	<div class="comment">
-		<button class="upvote-comment">^</button>
-    	{{votes}}
-    	<button class="downvote-comment"></button>
-		<span class="comment-user">{{userId}}</span>
-		{{#unless deleted}}
-			<span class="delete">Delete</span>
-		{{/unless}}
-		<div class="comment-text">{{text}}</div>
+		<div class="upvote-wrap">
+			<div class="upvote-comment"><span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
+    		<div class="votes">{{votes}}</div>
+    		<div class="downvote-comment"><span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
+    	</div>
+
+    	<div class="comment-body">
+			
+			
+			<div class="comment-text">
+				<span class="comment-user">{{userId}}</span>
+				{{text}}
+			</div>
+
+			{{#unless deleted}}
+				<div class="btn-group edit-menu">
+			      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        Delete <span class="caret"></span>
+			      </button>
+			      <ul class="dropdown-menu" id="edit-dropdown">
+			        <li><a class="delete">Delete</a></li>
+			      </ul>
+			    </div>
+			{{/unless}}
+		</div>
 	</div>
 
 </template>
