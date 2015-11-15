@@ -5,43 +5,49 @@
   	
 
 	{{> menu}}
-	<div id="topbar">
-		<div id="userdisplay">
-			<h1> Welcome {{name}}!</h1>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8">
+				<div id="userdisplay">
+					<h1> Welcome {{name}}!</h1>
+				</div>
+
+				<div id="numupvotes">
+					<h1> {{upvoteCount}}</h1>
+				</div>
+				<img class="upvoteassign" src="../images/upvoteicon.png">
+				<img class="commentassign" src="../images/comment.png">
+				<div id="numcomments">
+					<h1> Comments: {{commentCount}}</h1>
+				</div>
+			</div>
+
+			<div class="col-sm-4" id="rightcolumn">
+				<h1> Active since</h1> 
+				<p> {{prettyDate createdAt}}</p>
+				<br><br>
+				<h1>Email</h1>
+				<p> {{email}}</p>
+				<br><br>
+				<h1> Number of resolved posts</h1>
+				<p>(insert number of resolved posts)</p>
+
+				<img class= "babylogo" src="../images/logo.png">
+			</div>
 		</div>
 
-		<div id="numupvotes">
-			<h1> {{upvoteCount}}</h1>
-		</div>
-		<img class="upvoteassign" src="../images/upvoteicon.png">
-			<img class="commentassign" src="../images/comment.png">
-		<div id="numcomments">
-			<h1> Comments: {{commentCount}}</h1>
-		</div>
+
+		<div id="admin-error"></div>
+		<input type="text" id="netId">
+		<div class="add-admin">Add Admin</div>
+
+		{{#each admins}}
+			<div class="admin">
+				{{name}} {{_id}} 
+				<div class="remove-admin">Remove</div>
+			</div>
+		{{/each}}
 	</div>
-
-	<div id="rightcolumn">
-		<h1> Active since</h1> 
-		<p> {{prettyDate createdAt}}</p>
-		<br><br>
-		<h1>Email</h1>
-		<p> {{email}}</p>
-		<br><br>
-		<h1> Number of resolved posts</h1>
-		<p>(insert number of resolved posts)</p>
-
-		<img class= "babylogo" src="../images/logo.png">
-	</div>
-
-	<div id="admin-error"></div>
-	<input type="text" id="netId">
-	<div class="add-admin">Add Admin</div>
-
-	{{#each admins}}
-		<div class="admin">
-			{{name}} {{_id}} 
-			<div class="remove-admin">Remove</div>
-		</div>
-	{{/each}}
 
 </template>

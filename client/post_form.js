@@ -27,6 +27,9 @@ Template.post_form.helpers({
 
 	isSelected: function(){
 		var post = Posts.findOne({_id: Router.current().params._id});
+		if (post === undefined){
+			return false;
+		}
 		return (this.name == post.category);
 	},
 
@@ -62,7 +65,15 @@ Template.post_form.events({
 		var text = document.getElementById("post-text").value;
 	    var isAnon = document.getElementById("anonymous").checked;
 	    var category = document.getElementById("category").value;
-	    var status = document.getElementById("status").value;
+
+	    if (document.getElementById("status") != null){
+	    	var status = document.getElementById("status").value;
+	    }
+	    else{
+	    	var status = "open";
+	    }
+
+
 
 	    console.log(isAnon);
 	    // Require text and category
