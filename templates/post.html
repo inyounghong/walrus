@@ -20,12 +20,12 @@
 
      	<!-- Form for adding a new comment -->
      	<div class="comment-form">
-        <input type="text" name="text" id="comment-text" placeholder="Add comment" />
+        <textarea type="text" name="text" id="comment-text" placeholder="Add comment"></textarea>
         <label for="anonymous">
           <input type="checkbox" id="anonymous" name="anonymous"/>
           Comment Anonymously
         </label>
-        <button id="add-comment">Comment</button>
+        <button id="add-comment" class="button">Comment</button>
       </div>
 
      	{{#each comments}}

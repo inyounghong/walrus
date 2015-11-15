@@ -2,6 +2,13 @@
 	text-align: center;
 }
 
+.button{
+	background: #B31B1B;
+	color: #fff;
+	border: 0;
+	padding: 10px 20px;
+}
+
 #post-form{
 	max-width: 500px;
 	margin: 0 auto;
@@ -55,9 +62,45 @@ ul.post-list li{
 /* Comment Form */
 
 .comment-form{
-	margin-top: 20px;	
+	margin-top: 20px;
+	min-height: 140px;	
 }
 
 #comment-text{
 	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+#add-comment{
+	float: right;
+}
+
+/* Each comment */
+
+.comment{
+	border-top: 1px solid #ddd;
+	padding: 10px 0;
+	position: relative;
+	min-height: 70px;
+}
+
+.comment-user{
+	font-weight: 700;
+	padding-right: 5px;
+}
+
+.comment-body{
+	display: inline-block;
+	margin-left: 50px;
+}
+
+.upvote-wrap{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.comment-text{
+	
 }
