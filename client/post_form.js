@@ -7,6 +7,20 @@ Template.post_form.helpers({
 	    return !(Meteor.userId() === null);
 	},
 
+	isAdmin: function(){
+		if (Meteor.user() != undefined){
+			return Meteor.user().admin;
+		}
+	},
+
+	// Disables post form if not cornell
+	disabled: function(){
+		if (Meteor.user() === null || !Meteor.user().cornell){
+			return "disabled";
+		} 
+		return "";
+	},
+
 	categories: function() {
 	    return Categories.find();
 	  },
@@ -57,16 +71,21 @@ Template.post_form.events({
 			document.getElementById("error").innerHTML = "Please enter a title, a text and a category!";
 		} 
 		else {
+			if (isAnon){
+				var name = "Anonymous";
+			} else{
+				var name = Meteor.user().services.google.name;
+			}
 			if (Router.current().params._id === undefined){
 				// Adding a new post
 				console.log("adding post");
-				Meteor.call("addPost", title, text, category, isAnon, status, function(err, data){
+				Meteor.call("addPost", title, text, category, name, status, function(err, data){
 					Router.go("/post/" + data);
 				});
 			}
 			else{
 				// Updating an existing post
-				Meteor.call("updatePost", Router.current().params._id, title, text, category, isAnon, status, function(err, data){
+				Meteor.call("updatePost", Router.current().params._id, title, text, category, name, status, function(err, data){
 					Router.go("/post/" + Router.current().params._id);
 				});
 			}
