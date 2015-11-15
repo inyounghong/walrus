@@ -1,18 +1,12 @@
-<!-- Profile page --> 
-<!DOCTYPE html>
-<html>
-<head>
-	<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
-	<title>CU Change</title>
-	<link type="text/css" rel="stylesheet" href="../css/profilestyle.css">
-	<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
-</head>
+<template name="profile">
+	<div id="headerimageindex">
+    	<h1 class="headertitle">Instigate Change</h1>
+  	</div>
 
-<body>
+	{{> menu}}
 	<div id="topbar">
 		<div id="userdisplay">
-			<h1> Welcome (insert username)!</h1>
+			<h1> Welcome {{this.name}}!</h1>
 		</div>
 
 		<div id="numupvotes">
@@ -27,23 +21,14 @@
 
 	<div id="rightcolumn">
 		<h1> Active since</h1> 
-		<p> (insert time stamp)
+		<p> (insert time stamp)</p>
 		<br><br>
 		<h1>Email</h1>
-		<p> (insert email)
+		<p> (insert email)</p>
 		<br><br>
 		<h1> Number of resolved posts</h1>
-		<p>(insert number of resolved posts)
+		<p>(insert number of resolved posts)</p>
 
 		<img class= "babylogo" src="../images/logo.png">
-
-</body>
-
-		
-
-
-
-
-
-</html>
-
+	</div>
+</template>
