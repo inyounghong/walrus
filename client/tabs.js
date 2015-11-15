@@ -5,6 +5,12 @@ Template.tab.helpers( {
 		console.log(this.subject);
 		var status = Session.get("status");
 		var filter = Session.get("filter");
+		var category = {category: this.subject};
+
+		if (this.subject == "all"){
+			category = {};
+		}
+
 
 		if (filter == null){
 			Session.set("filter", "Top");
@@ -22,7 +28,7 @@ Template.tab.helpers( {
 		}
 
 	    if (status === undefined || status == ""){
-	      return Posts.find({category: this.subject}, sort);
+	      return Posts.find(category, sort);
 	    }
 	    else{
 	      var status_array = status.split("/");
@@ -33,36 +39,45 @@ Template.tab.helpers( {
 	        return Posts.find({}, {sort: {createdAt: -1}});
 	      }
 	      for (i = 0; i < status_array.length -1; i++){
-	        data.push({status: status_array[i], category: this.subject});
+	      	if (this.subject == "all"){
+				data.push({status: status_array[i]});
+			}else {
+				data.push({status: status_array[i], category: subject});
 	      }
+			}
+	        
 	      return Posts.find({ $or: data}, sort);
 	    }
 	},
 
-	title: function(){
-		return this.subject;
-	},
-
 	topIsSelected: function() {
-		return Session.get("filter") == "Top";
+		if (Session.get("filter") == "Top") return "active";
 	},
 
 	oldestIsSelected: function() {
-		return Session.get("filter") == "Oldest";
+		if (Session.get("filter") == "Oldest") return "active";
 	},
 
 	newestIsSelected: function() {
-		return Session.get("filter") == "Newest";
+		if (Session.get("filter") == "Newest") return "active";
 	},
 	categories: function() {
 	    return Categories.find();
 	  },
+
+	title: function(){
+		if (this.subject == "all"){
+			return "Instigate Change";
+		}
+		return this.subject;
+	}
 });
 
 
 Template.tab.events( {
-	"change #filter" : function(event) {
-		Session.set("filter", document.getElementById("filter").value);
+	"click #filter li" : function(event) {
+		console.log("clicked");
+		Session.set("filter", event.target.id);
 	},
 
 	 "change .status-checks input" : function(event) {
