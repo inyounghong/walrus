@@ -15,10 +15,6 @@
 	
 	<div class="container">
 
-		<div class="c">
-			<a id="add-post-button" href="/post_form">Add Post</a>
-		</div>
-
 		<div class="row">
 			<!-- Post column -->
 	        <div class="col-sm-8">
@@ -38,10 +34,12 @@
 
 	        <!-- sidebar column -->
 	        <div class="col-sm-4">
+
+	        	<div class="c">
+					<a id="add-post-button" href="/post_form">Add Post</a>
+				</div>
+				
 	        	<b>Sort By</b>
-	        	
-
-
 				<select class="form-control" id="category" required {{disabled}}>
 					<option value="all" selected>All Categories</option>
 					{{#each categories}}
