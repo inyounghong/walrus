@@ -30,11 +30,11 @@ Meteor.methods({
     });
   },
 
-  upvoteComment: function(postId) {
-    Comments.update(postId, {$inc: {votes: 1}});
+  upvoteComment: function(postId, count) {
+    Comments.update(postId, {$inc: {votes: count}});
   },
 
-  downvoteComment: function(postId) {
-    Comments.update(postId, {$inc: {votes: -1}});
+  downvoteComment: function(postId, count) {
+    Comments.update(postId, {$inc: {votes: -1*count}});
   }
 });
