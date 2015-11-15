@@ -22,9 +22,11 @@ Meteor.methods({
     });
     return postid;
   },
+  
   addReply: function (commentId,replyId) {
     Comments.update({_id: commentId}, {$addToSet: {replies: replyId}});
   },
+
   deleteComment: function (commentId) {
     Comments.update(commentId, {$set: 
       {
