@@ -13,17 +13,18 @@
 					<h1> Welcome {{name}}!</h1>
 				</div>
 
-				<div id="numupvotes">
-					<h1> {{upvoteCount}}</h1>
-				</div>
-				<img class="upvoteassign" src="../images/upvoteicon.png">
-				<img class="commentassign" src="../images/comment.png">
-				<div id="numcomments">
-					<h1> Comments: {{commentCount}}</h1>
-				</div>
+				
+				<!--<img class="upvoteassign" src="../images/upvoteicon.png">
+				<img class="commentassign" src="../images/comment.png">-->
+				
 			</div>
 
 			<div class="col-sm-4" id="rightcolumn">
+				
+				<h1><img class="commentassign" src="../images/comment.png">Comments: {{commentCount}}
+				<img class="upvoteassign" src="../images/upvoteicon.png">{{upvoteCount}}</h1>
+
+
 				<h1> Active since</h1> 
 				<p> {{prettyDate createdAt}}</p>
 				<br><br>
