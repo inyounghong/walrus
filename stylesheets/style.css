@@ -460,6 +460,10 @@ body{
 	font-family: 'Raleway';
 	margin-top: 140px;
 }
+h1#welcome{
+	font-size: 250%;
+	color: #000;
+}
 
 /*end profile.html styling*/
 			
