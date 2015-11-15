@@ -13,11 +13,16 @@ ServiceConfiguration.configurations.insert({
 });
 
 Accounts.onCreateUser(function (options, user) {
-  console.log('Creating user: ' + user.username);
   	if (Meteor.isServer){
 		user.upvoted = [];
 		user.downvoted = [];
 		user.admin = false;
+		var email = user.services.google.email;
+		var domain = email.split("@");
+		if (domain == "cornell.edu"){
+			user.cornell = 	false;
+		}
+		
 	}
 	if (options.profile){
 		user.profile = options.profile;
