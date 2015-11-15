@@ -48,11 +48,21 @@ Template.post.events({
   },
 
   "click .upvote-comment" : function (event) {
-    Meteor.call("upvoteComment", this._id);
+    Meteor.call("upvotePostToUser", Meteor.user(), this._id, function(error,data) {
+      if (data != null) {
+        Meteor.call("upvoteComment", data[0],data[1]);
+      }
+    });
+    
   },
   "click .downvote-comment" : function(event) {
-    Meteor.call("downvoteComment", this._id);
-  }
+     Meteor.call("downvotePostToUser",Meteor.user(),this._id, function(error,data){
+        if (data!= null) {
+          Meteor.call("downvoteComment", data[0],data[1]);
+        }
+    });
+    
+  },
 
   
 });
