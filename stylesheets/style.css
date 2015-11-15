@@ -198,7 +198,6 @@ h2.petitiontitle{
 }
 #headerimageall, #headerimageindex{
 	background: url('../images/artsquad.jpg');
-
 }
 #headerimagetechnology{
 	background: url('../images/technologywall.png')
@@ -228,7 +227,7 @@ h2.petitiontitle{
 	background: url('../images/financial.jpg')
 }
 #headerimageenvironment{
-	background: url('../images/financial.jpg')
+	background: url('../images/environment.jpg')
 }
 #headerimageresidential{
 	background: url('../images/residential.jpg')
