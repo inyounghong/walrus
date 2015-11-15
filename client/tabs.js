@@ -8,7 +8,6 @@ Template.tab.helpers( {
 			filter = "Top";
 		}
 		if (filter == "Top"){
-			
 			return Posts.find({category: this.subject}, {sort: {votes: -1}});
 		}
 
@@ -19,6 +18,10 @@ Template.tab.helpers( {
 		else if (filter == "Newest" ) {
 			return Posts.find({category: this.subject}, {sort: {createdAt: -1}});
 		}
+	},
+
+	title: function(){
+		return this.subject;
 	},
 
 	topIsSelected: function() {
