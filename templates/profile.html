@@ -9,11 +9,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8">
-				<div id="userdisplay">
-					<h1 id="welcome"> Welcome {{firstName}}!</h1>
-				</div>
 
-				
+				<h1 id="welcome"> Welcome {{firstName}}!</h1>
+
+				<h2>My Posts</h2>
+				<ul id="Posts" class="post-list">
+		            {{#each posts}}
+		              <li> {{> list_post}}</li>
+		            {{/each}}
+		        </ul>
 				<!--<img class="upvoteassign" src="../images/upvoteicon.png">
 				<img class="commentassign" src="../images/comment.png">-->
 				
@@ -40,7 +44,7 @@
 			</div>
 		</div>
 
-
+		<h2>Admin Corner</h2>
 		<div id="admin-error"></div>
 		<input type="text" id="netId">
 		<div class="add-admin">Add Admin</div>
