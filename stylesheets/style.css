@@ -1,10 +1,86 @@
-
-
 body{
 				margin: 0;
 				font-family: "Raleway", sans-serif;
 				background-color: #FFF;
 			}
+
+			#loginpage{
+				background-image: url("../images/backgroundimg.jpg");
+				/*IMG SOURCE: https://en.wikipedia.org/wiki/Cornell_University#/
+				media/File:Cornell_University_arts_quad.JPG */
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				background-size: 1460px 978px;
+			}
+
+			/*START HOMEPAGE STYLING*/
+			#logo{
+				margin-top: 150px;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			#sa{
+				float: right;
+				margin: auto;
+				padding: 10px;
+			}
+			#subtitle{
+				border-width: 1px;
+				border-spacing: 50px;
+				border-style: solid;
+				border-color: white;
+				border-radius: 1px 1px 1px 1px;
+				color:white;
+				font-size: small;
+				font-family: 'Raleway', sans-serif;
+				padding-top: 0px;
+				text-align: center;
+				margin-top: 100px;
+
+			}
+			a#subtitlelink{
+				text-decoration: none;
+				color: #ffffff;
+			}
+			#mainsub{
+				padding-top: 30px;
+			}
+
+			#subtitle{
+				text-decoration: none;
+				margin: auto;
+				width: 15%;
+			}
+		
+			#subtitle:hover{
+				background-color: #FFF;
+				-webkit-transition: all .3s linear;
+			}
+			#subtitle h2:hover{
+				color: #B31B1B;
+				-webkit-transition: all .3s linear;
+			}
+			p#footer{
+				color: white;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 150px;
+				padding-bottom: 20px;
+			}
+			p#footer a{
+				text-decoration: none;
+				color: white;
+			}
+			p#footer a:hover{
+				color: #B31B1B;
+				-webkit-transition: all .3s linear;
+			}
+			/*END HOMEPAGE STYLING*/
+
+
+
 			/*post info formatting*/
 			ul.postinfo{
 				margin-top: 50px;
@@ -104,6 +180,13 @@ body{
 				position: relative;
 				margin-top: -6%;
 			}
+			#headerimagehome{
+				background: url('../images/artsquad.jpg');
+				height: 230px;
+				width: 100%;
+				position: relative;
+				margin-top: -6%;
+			}
 
 			#subtitle{
 				border-width: 1px;
@@ -126,4 +209,24 @@ body{
 				margin-left: 10%;
 				margin-right: 10%;
 			}
+			p#signin{
+				text-align: center;
+				margin: auto;
+				color: #000;
+			}
+			.petitiontext{
+				transition: all .2s ease-in-out;
+			}
+			.petitiontext:hover{
+				transform: scale(1.1);
+			}
+			img.academicimage{
+				position: relative;
+				float: left;
+				margin-top: 6%;
+				margin-left: 10%;
+				margin-right: 3%;
+				margin-bottom: 3%;
+			}
+
 
