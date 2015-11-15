@@ -1,0 +1,129 @@
+
+
+body{
+				margin: 0;
+				font-family: "Raleway", sans-serif;
+				background-color: #FFF;
+			}
+			/*post info formatting*/
+			ul.postinfo{
+				margin-top: 50px;
+				margin-bottom: 50px;
+				text-align: center;
+				list-style: none;
+				font-size: small;
+				padding: 16px;
+				margin-top: 0px;
+			}
+			ul.postinfo li{
+				display: inline;
+				color: black;
+				padding-left: 112px;
+				padding-right: 0px;
+				float: left;
+			}
+			/*main menu*/
+			ul.menu{
+				margin-top: 50px;
+				margin-bottom: 50px;
+				text-align: center;
+				list-style: none;
+				font-size: large;
+				color: #ffffff;
+				background-color: #B31B1B;
+				padding: 16px;
+				margin-top: 0px;
+			}
+			ul.menu li{
+				display: inline;
+				color: #ffffff;
+			}
+			ul.menu li a{
+				color: #ffffff;
+				text-decoration: none;
+				padding-top: 0px;
+				padding-bottom: 0px;
+				padding-left: 70px;
+				padding-right: 70px;
+
+			}
+
+			ul.menu li a:hover{
+				background-color: #fff;
+				padding-top: 16px;
+				padding-bottom: 16px;
+				padding-left: 70px;
+				padding-right: 70px;
+				color: #B31B1B;
+				-webkit-transition: all .3s linear;
+			}
+
+			/*end main menu*/
+
+
+			/*about headings*/
+			h1.petitions{
+				text-align: center;
+				margin: auto;
+				font-size: 200%;
+				font-weight: lighter;
+				font-family: 'Raleway';
+			}
+			h1.headertitle{
+				text-align: center;
+				color: white;
+				padding-top: 9%;
+				font-size: 300%;
+				font-family: 'Raleway';
+				font-weight: lighter;
+			}
+			h2.petitiontitle{
+				font-weight: lighter;
+				margin-left: 10%;
+				padding-top: 20px;
+				padding-bottom: 10px;
+			}
+			#headerimageacademics{
+				background: url('../images/academic.jpg');
+				height: 230px;
+				width: 100%;
+				position: relative;
+				margin-top: -6%;
+			}
+			#headerimagesports{
+				background: url('../images/athletics.jpg');
+				height: 230px;
+				width: 100%;
+				position: relative;
+				margin-top: -6%;
+			}
+			#headerimagemaintenance{
+				background: url('../images/maintenance.jpg');
+				height: 230px;
+				width: 100%;
+				position: relative;
+				margin-top: -6%;
+			}
+
+			#subtitle{
+				border-width: 1px;
+				border-style: solid;
+				border-radius: 2px 2px 2px 2px;
+				font-size: small;
+				font-family: 'Raleway', sans-serif;
+				margin-left: 570px;
+				margin-right: 570px;
+				padding: 0px;
+				text-align: center;
+			}
+
+			p.profile{
+				float:right;
+				position: absolute;
+				color: black;
+			}
+			p.posts{
+				margin-left: 10%;
+				margin-right: 10%;
+			}
+

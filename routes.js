@@ -5,6 +5,10 @@ Router.configure({
 
 // Define index route
 Router.route('/', {
+    template: 'login'
+});
+
+Router.route('/posts', {
     template: 'index'
 });
 

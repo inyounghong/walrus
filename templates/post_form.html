@@ -2,16 +2,33 @@
 {{#if isLogged}}
 	<div id="error"></div>
 
-	  <input type="text" name="text" id="post-text" placeholder="Type to add new posts" value="{{text}}"/>
 
-	  <select id="category" required>
+
+	  <input type="text" name="text" id="post-text" placeholder="Type to add new posts" class="form-control" value="{{text}}"/>
+
+	  <select class="form-control" id="category" required>
 	  	<option selected disabled>Category</option>
-	  	{{#each tabs}}
-        	<option value="{{name}}" selected="">{{name}}</option>
+	  	{{#each categories}}
+        	<option value="{{name}}" selected="{{isSelected}}">{{name}}</option>
       	{{/each}}
 	  </select>
-	  <input type="checkbox" id="anonymous"><label for="anonymous">Post Anonymously</label>
-	  <div class="submit-post">Submit post</div>
+
+	  <div class="checkbox">
+		  <label>
+		  	<input class="form-control" type="checkbox" id="anonymous">Post Anonymously
+		  </label>
+		</div>
+
+	  <select class="form-control" id="status" required>
+         <option value="open" selected="{{openSelected}}">Open</option>
+         <option value="progress" selected="{{progressSelected}}">In Progress</option>
+         <option value="resolved" selected="{{resolvedSelected}}">Resolved</option>
+         <option value="closed" selected="{{closedSelected}}">Closed</option>
+	  </select>
+
+	  <div class="form-control submit-post">Submit post</div>
+
+
 
 {{/if}}
 </template>
