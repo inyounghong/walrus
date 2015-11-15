@@ -7,7 +7,7 @@ if (Meteor.isServer) {
 }
 
 function initialize(collection) {
-	var categories = ["academics","sports","maintenance"];
+	var categories = ["Academics","Athletics","Maintenance"];
 	for(i = 0; i < categories.length; i++ ){
 		if (collection.find({name: categories[i]}).count() == 0){
 			collection.insert({
