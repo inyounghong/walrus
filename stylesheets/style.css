@@ -118,10 +118,12 @@ body{
 			ul.menu li{
 				display: inline;
 				color: #ffffff;
+				text-shadow: 2px 2px 4px #000;
 			}
 			ul.menu li a{
 				color: #ffffff;
 				text-decoration: none;
+				text-shadow: 20px;
 				padding-top: 0px;
 				padding-bottom: 0px;
 				padding-left: 70px;
@@ -379,6 +381,11 @@ body{
 			 	padding-top:10px;
 			 	padding-bottom:10px;
 			 }
+
+			 .date{
+			 	margin-left: 30px;
+			 }
+
 
 /* profile css page styling*/
 #userdisplay h1{
