@@ -1,3 +1,7 @@
+.c{
+	text-align: center;
+}
+
 #post-form{
 	max-width: 500px;
 	margin: 0 auto;
@@ -14,8 +18,36 @@
 	text-align: center;
 }
 
+/* Add post button */
+
+#add-post-button{
+	background: #B31B1B;
+	color: #fff;
+	padding: 10px;
+	display: inline-block;
+	margin: 10px 0;
+}
+
+/* List posts */
+
+ul.post-list li{
+	list-style-type: none;
+}
+
 .list_post{
 	border: 1px solid #ddd;
-	padding: 10px;
+	padding: 10px 30px;
+	position: relative;
 	background: #fff;
+}
+
+.edit-menu{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#edit-dropdown{
+	right: 0!important;
+	left: initial;
 }

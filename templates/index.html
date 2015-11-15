@@ -23,19 +23,25 @@
 
   <div class="container">
 
-
-      
-      
-      <a href="/post_form">Add Post!</a>
-
-      {{#each tabs}}
+<!--       {{#each tabs}}
         <a href="/{{name}}">{{name}}</a>
-      {{/each}}
-      <ul id="Posts">
-      {{#each posts}}
-        <li> {{> list_post}}</li>
-      {{/each}}
-    </ul>
+      {{/each}} -->
+      <div class="c">
+        <a id="add-post-button" href="/post_form">Add Post!</a>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8">
+
+          <ul id="Posts" class="post-list">
+            {{#each posts}}
+              <li> {{> list_post}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="col-sm-4">
+        </div>
+      </div>
   </div>
 
 

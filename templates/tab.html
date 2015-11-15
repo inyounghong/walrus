@@ -6,12 +6,28 @@
 		<i class="fa fa-book" style="font-size:36px;color:white"></i>
 	</div>
 	{{> menu}}
-	<select id = "filter" > 
-		<option value = "Top" selected = {{topIsSelected}}> Top</option>
-		<option value = "Oldest" selected = {{oldestIsSelected}}> Oldest</option>
-		<option value = "Newest" selected = {{newestIsSelected}}> Newest</option>
-	</select>
-	{{#each posts}}
-		{{> list_post}}
-	{{/each}}
+	
+
+	<a id="add-post-button" href="/post_form">Add Post!</a>
+
+	<div class="row">
+		<!-- Post column -->
+        <div class="col-sm-8">
+
+          <ul id="Posts" class="post-list">
+            {{#each posts}}
+              <li> {{> list_post}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <!-- sidebar column -->
+        <div class="col-sm-4">
+        	<select id = "filter" > 
+				<option value = "Top" selected = {{topIsSelected}}> Top</option>
+				<option value = "Oldest" selected = {{oldestIsSelected}}> Oldest</option>
+				<option value = "Newest" selected = {{newestIsSelected}}> Newest</option>
+			</select>
+        </div>
+      </div>
 </template>
