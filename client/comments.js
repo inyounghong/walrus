@@ -1,5 +1,5 @@
 Meteor.subscribe("comments");
-
+Meteor.subscribe("userData");
 Template.post.helpers({
   comments: function () {
     return Comments.find({}, {sort: {votes: -1}});
@@ -8,6 +8,25 @@ Template.post.helpers({
 });
 
 Template.post.events({
+
+  "click .Upvote" : function (event) {
+    Meteor.call("upvotePostToUser", Meteor.user(), this._id, function(error,data){
+      if (data != null){
+           Meteor.call("upvotePost", data[0],data[1]);
+         }
+    });
+      
+    },
+
+  "click .Downvote" : function(event) {
+     Meteor.call("downvotePostToUser",Meteor.user(),this._id, function(error,data){
+        if (data!= null) {
+          Meteor.call("downvotePost", data[0],data[1]);
+        }
+    });
+    
+  },
+
   "click #add-comment": function (event) {
     event.preventDefault();
     var text = document.getElementById("comment-text").value;
