@@ -7,9 +7,9 @@ ServiceConfiguration.configurations.remove({
 });
 ServiceConfiguration.configurations.insert({
   service: "google",
-  clientId: "535353328688-fgfekbppd2n1ccgpe9o0s2ch56gjqa39.apps.googleusercontent.com",
+  clientId: "653500954575-nann9qghdmje95f1ncfbmqiudanrj4r6.apps.googleusercontent.com",
   loginStyle: "popup",
-  secret: "TBs8FFiAfWq6Sjo1kxDWWWgF"
+  secret: "TGNCIDVDzCMkdXkjcFQ6y7pI"
 });
 
 Accounts.onCreateUser(function (options, user) {
